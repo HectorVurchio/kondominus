@@ -1,0 +1,17 @@
+CREATE TABLE `empleados` (
+  `id_emp` int NOT NULL AUTO_INCREMENT,
+  `cod_edificio` VARCHAR(20) NOT NULL,
+  `cedula` varchar(12) NOT NULL,
+  `nombre` varchar(80) NOT NULL,
+  `direccion` varchar(80) NOT NULL,
+  `id_estado` int NOT NULL,
+  `id_ciudad` int NOT NULL,
+  `telefono` varchar(16) NOT NULL,
+  `correo` varchar(80) NOT NULL,
+  `actividad` varchar(80) NOT NULL,
+  `sueldo` DOUBLE NOT NULL,
+  `cod_acceso` varchar(20) NOT NULL,
+  `creada` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id_emp`),
+  KEY `cod_edificio` (`cedula`)
+) ENGINE=InnoDB  DEFAULT CHARSET=UTF8MB4 ;

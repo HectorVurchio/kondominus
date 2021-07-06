@@ -1,0 +1,16 @@
+CREATE TABLE `clasif_proyec` (
+  `id_clasif` INT NOT NULL AUTO_INCREMENT,
+  `cod_clasif` VARCHAR(20) NOT NULL,
+  `clasificacion` VARCHAR(60) NOT NULL,
+  `creada` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id_clasif`),
+  KEY `cod_clasif` (`cod_clasif`)
+) ENGINE=InnoDB  DEFAULT CHARSET=UTF8MB4 ;
+
+INSERT INTO clasif_proyec (cod_clasif,clasificacion) VALUES
+("obnue","Obra Nueva"),
+("obade","Obligaciones"),
+("emerg","Emergencias"),
+("previ","previsiones");
+
+UPDATE clasif_proyec SET cod_clasif='previ' WHERE id_clasif=4;

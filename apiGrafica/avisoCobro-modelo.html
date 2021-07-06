@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviso de Cobro - Modelo | Preview</title>
+	<link rel="shortcut icon" href="#" />
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="/apiGrafica/estilos/avisoCobro-Modelo.css?1">
+	<script src="/apiGrafica/js/nuevos/avisoCobro-Modelo.js?1" type="module"></script>
+</head>
+<body>
+    <div class='header'></div>
+    <div class='subHeader'></div>
+    <table class='cuerpoAC'>
+        <tr><th>#</th><th>CÓDIGO</th><th>DESCRIPCIÓN DE GASTOS</th><th>MONTO</th><th>TOTAL</th> </tr>
+    </table>
+    <div class='inferior uno'>
+        <div class='aPagar'>
+            <div class='title uno'>MONTO A COBRAR:</div>
+            <div class='sumaCuotaT'></div>
+        </div>
+    </div>
+    <table class='tablaFR'>
+        <tr>
+            <th>Saldo Anterior</th>
+            <th>Cargos del mes</th>
+            <th>Abono del mes</th>
+            <th>Saldo Actual</th>
+        </tr>
+        <tr>
+            <td class='saldoAnterioFR'></td>
+            <td class='cargosFR'></td>
+            <td class='montoFR'></td>
+            <td class='saldoFR'><b></b></td>
+        </tr>
+    </table>
+	<div class='footer'>
+		<div class='notas'>
+			<div class='title dos'>Notas:</div>
+			<div class='notaPP'></div>
+		</div>
+	</div>
+	<form hidden id='datadb'></form>
+	<form hidden id='idxdb1'></form>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+CREATE TABLE `propietarios` (
+  `id_prop` int NOT NULL AUTO_INCREMENT,
+  `cod_propietario` varchar(20) NOT NULL,
+  `cod_edificio` varchar(20) NOT NULL,
+  `cuenta_propietario` varchar(14) NOT NULL,
+  `unidad` VARCHAR(5) NOT NULL,
+  `alicuota` double NOT NULL,
+  `saldo` DOUBLE NOT NULL,
+  `numero_acceso` VARCHAR(20) NOT NULL,
+  `creada` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id_prop`),
+  KEY `cuenta_propietario` (`cuenta_propietario`),
+  KEY `cod_propietario` (`cod_propietario`)
+) ENGINE=InnoDB  DEFAULT CHARSET=UTF8MB4 ;
+
+
+explicacion:
+cod_propietario: combinacion del rifdelcondominio-unidad
+cod_edificio: se refiere al rif del condominio
+cuenta_propietario: se refiere al numero de cedula o rif del propietario
+unidad: nomenclatura de la unidad del edificio
+alicuota: alicuota de la unidad
+saldo: monto de dinero que la unidad tiene depositada en el condominio
+numero_acceso: numero creado por el sistema que identifica quien realizo la operacion
+creada: fecha y hora en las cuales se hicieron las anotaciones
+
+
+ALTER TABLE propietarios ADD COLUMN saldo DOUBLE NOT NULL AFTER alicuota;
+ALTER TABLE propietarios MODIFY unidad VARCHAR(5) NOT NULL;
+
+
+INSERT INTO `propietarios` (`cod_propietario`, `cod_edificio`, `cuenta_propietario`, `unidad`, `alicuota`) VALUES
+('J-365489527-1A','J-365489527','V-13801637','1-A','3.22'),
+('J-365489527-1B','J-365489527','V-16447842','1-B','3.22'),
+('J-365489527-2A','J-365489527','V-4363095','2-A','3.22'),
+('J-365489527-2B','J-365489527','J-312099186','2-B','3.22');
+
+UPDATE propietarios SET cod_edificio = 'J-365489527' WHERE cod_propietario = 'J-365489527-1B';
+UPDATE propietarios SET cod_edificio = 'J-365489527' WHERE cod_propietario = 'J-365489527-2A';
+UPDATE propietarios SET cod_edificio = 'J-365489527' WHERE cod_propietario = 'J-365489527-2B';
+
+
+INSERT INTO `propietarios` (`cod_propietario`, `cod_edificio`, `cuenta_propietario`, `unidad`, `alicuota`) VALUES
+('J-365489527-1A','J-365489527','V-14088868','1A','0.0208'),
+('J-365489527-1B','J-365489527','V-12473052','1B','0.0208'),
+('J-365489527-1C','J-365489527','V-16447842','1C','0.0208'),
+('J-365489527-1D','J-365489527','V-13801637','1D','0.0208'),
+('J-365489527-2A','J-365489527','V-15653410','2A','0.0208'),
+('J-365489527-2B','J-365489527','V-81042342','2B','0.0208'),
+('J-365489527-2C','J-365489527','V-13801638','2C','0.0208'),
+('J-365489527-2D','J-365489527','V-13801639','2D','0.0208'),
+('J-365489527-3A','J-365489527','V-15226198','3A','0.0208'),
+('J-365489527-3B','J-365489527','V-13801637','3B','0.0208'),
+('J-365489527-3C','J-365489527','V-10321456','3C','0.0208'),
+('J-365489527-3D','J-365489527','V-11322457','3D','0.0208'),
+('J-365489527-4A','J-365489527','V-12323458','4A','0.0208'),
+('J-365489527-4B','J-365489527','V-13324459','4B','0.0208'),
+('J-365489527-4C','J-365489527','V-14325460','4C','0.0208'),
+('J-365489527-4D','J-365489527','V-15326461','4D','0.0208'),
+('J-365489527-5A','J-365489527','V-16327462','5A','0.0208'),
+('J-365489527-5B','J-365489527','V-17328463','5B','0.0208'),
+('J-365489527-5C','J-365489527','V-18329464','5C','0.0208'),
+('J-365489527-5D','J-365489527','V-8330465','5D','0.0208'),
+('J-365489527-6A','J-365489527','V-9331466','6A','0.0417'),
+('J-365489527-6B','J-365489527','V-10332467','6B','0.0417'),
+('J-365489527-7A','J-365489527','V-13333468','7A','0.0417'),
+('J-365489527-7B','J-365489527','V-11334469','7B','0.0417'),
+('J-365489527-8A','J-365489527','V-12335470','8A','0.0417'),
+('J-365489527-8B','J-365489527','V-5336471','8B','0.0417'),
+('J-365489527-9A','J-365489527','V-6337472','9A','0.0417'),
+('J-365489527-9B','J-365489527','V-7338473','9B','0.0417'),
+('J-365489527-10','J-365489527','V-8339474','10','0.0833'),
+('J-365489527-11','J-365489527','V-9340475','11','0.0833'),
+('J-365489527-12','J-365489527','V-10341476','12','0.0833'),
+('J-365489527-ADMIN','J-365489527','V-13801637','ADMIN','1'),
+('J-365489527-ADMIN','J-365489527','V-15226198','ADMIN','1');
+
+
+
+DELETE FROM PROPIETARIOS WHERE cod_propietario = 'J-365489527-1A';
+
+
+
+
+

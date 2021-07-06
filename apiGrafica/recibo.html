@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset = 'utf-8'/>
+		<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+		<meta name='description' content = 'Recibo De Pago'/>
+		<meta name='keywords' content='Recibos,Facturas'/>
+		<link rel='stylesheet' href='/apiGrafica/estilos/reciboPago.css'/>
+		<link rel='stylesheet' href='/apiGrafica/estilos/reciboPagoPrinted.css' type='text/css' media='print'/>
+		<script src="/apiGrafica/js/recibo.js"></script>
+		<title>Recibo De Pago</title>
+	</head>
+	<body>
+		<section id='secOne'>
+		<p id='antTit'><span id='atIz'></span><span id='atDer'></span></p>
+		<h1 id='tit'></h1>
+		<div id='cuerpo'> Yo <span id='nombre'></span>Cedula De Identidad Numero<span id='cedula'></span>He Recibido De<span id='nombEdif'></span>
+		 La Cantidad De<span id='monto'></span>
+		 Por Concepto De<span id='concepto'></span>Pagado Mediante<span id='formaPago'></span>De Referencia Numero
+			<span id='referencia'></span>
+		 </div>
+		<p id='conforme'>Recibi Conforme</p>
+		<div id='smallOne'><div id="nomEd"></div><div id="dir"></div></div>
+		<div id='smallTwo'><div id="ciu"></div><div id="est"></div><div id="tel"></div><div id="email"></div>
+		<div id="numRi"></div>
+		</div>
+		</section>
+		<div><button id='buttonReturn' onclick='new regresar()'>Regresar</button></div>
+		<div><button id='buttonPrint' onclick='new printPagina()'>Imprimir</button></div>
+		
+		<section id='secTwo'>
+		<p id='antTit'><span id='atIzTwo'></span><span id='atDerTwo'></span></p>
+		<h1 id='titTwo'></h1>
+		<div id='cuerpo'> Yo <span id='nombreTwo'></span>Cedula De Identidad Numero<span id='cedulaTwo'></span>
+			He Recibido De<span id='nombEdifTwo'></span>
+		 La Cantidad De<span id='montoTwo'></span>
+		 Por Concepto De<span id='conceptoTwo'></span>Pagado Mediante<span id='formaPagoTwo'></span>
+		 De Referencia Numero<span id='referenciaTwo'></span>
+		 </div>
+		<p id='conforme'>Recibi Conforme</p>
+		<div id='smallOne'><div id="nomEdTwo"></div><div id="dirTwo"></div></div>
+		<div id='smallTwo'><div id="ciuTwo"></div><div id="estTwo"></div><div id="telTwo"></div><div id="emailTwo"></div>
+		<div id="numRiTwo"></div>
+		</div>
+		</section>
+	</body>
+
+</html>

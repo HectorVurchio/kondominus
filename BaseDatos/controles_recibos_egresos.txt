@@ -1,0 +1,15 @@
+CREATE TABLE `controles_recibos_egresos` (
+  `id_cre` INT NOT NULL AUTO_INCREMENT,
+  `cod_edificio` VARCHAR(20) NOT NULL,
+  `cont_rec_pago` INT NOT NULL,
+  `numero_acceso` varchar(20) NOT NULL,
+  `creada` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id_cre`),
+  KEY `cod_edificio` (`cod_edificio`)
+) ENGINE=InnoDB  DEFAULT CHARSET=UTF8MB4 ;
+
+
+cod_edificio: rif del condominio;
+cont_rec_pago: numero entero secuencial del control del condominio;
+numero_acceso: codigo creado por el sistema para control de acceso del usuario;
+creada: fecha y hora en la que el sistema registro la anotacion. generada automaticamente por la base de datos;

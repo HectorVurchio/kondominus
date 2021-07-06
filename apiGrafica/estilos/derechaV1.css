@@ -1,0 +1,154 @@
+   .derecha{
+	display:block;
+	background-color:#f8f8ff;
+	width: 100%;
+	/*height:820px;*/
+	}
+	
+	.cuerpo .derecha .areaFacturas{
+	  display:block;
+	  border-style: solid;
+      border-width: 0px;
+	  border-radius: 10px 10px 10px 10px;
+	  margin: auto;
+	  /*overflow: scroll;*/
+	  background-color:#ffffff;
+	  margin-top:20px;
+	  width: 90%;
+	  height:500px;
+	  overflow: auto;
+	}
+	
+	.cuerpo .derecha .factZone{
+	 margin: auto;
+	 display:flex;
+	 flex-wrap:wrap;
+	 align-content: space-between;
+	 justify-content:certer;
+	 height:100px;
+	 width:90%;
+	}
+
+    .cuerpo .derecha .factZone .areaFecha{
+	 height:50px;
+	 width:300px;
+	 margin: auto;
+	 }
+	 
+	.cuerpo .derecha .factZone .areaBoton{
+	 height:50px;
+     width:300px;
+     margin: auto;	 
+	}
+	
+	.cuerpo .derecha .factZone .areaFecha #rangOneLab{
+	 color:#333;
+	 display:inline-block;
+	 float:left;
+	 background-color:#d9d9d9;
+	 margin-left:5%;
+	 margin-top:3%;
+	 padding-top:10px;
+	 text-align:center;
+	 padding-bottom:4px;
+	 padding-right:4px;
+	 padding-left:4px;
+	 border-radius: 5px 0px 0px 5px;
+	 height:20px;
+	}
+	
+	.cuerpo .derecha .factZone .areaFecha #rangoOne{
+	 width: 200px;
+	 height:30px;
+	 display:inline-block;
+	 float:left;
+	 margin-top:3%;
+	 border-radius: 0px 5px 5px 0px;
+	}
+	
+
+	
+	.cuerpo .derecha .factZone .areaBoton #facButton{
+	 display:inline-block;
+	 float:right;
+	 margin-right:5%;
+	 margin-top:10%;
+	 width:100px;
+	 height:33px;
+	 border-radius: 5px 5px 5px 5px;
+	 color:#333;
+	}
+	
+	
+    @media (min-width: 1000px) {
+
+   	.izquierda{
+	   margin-left:30px;
+	}
+	
+	.derecha {
+	   	width: 60%;
+		margin:auto;
+	}
+	
+	.cuerpo .derecha #facButton{
+	  margin-right:5%;
+	}
+
+}
+
+@media (min-width: 500px) {
+    .cuerpo .derecha .factZone .areaFecha{
+	 height:100px;
+	 width:70%;
+	 }
+	 
+	.cuerpo .derecha .factZone .areaBoton{
+	 height:100px;
+     width:30%;	 
+	}
+
+}
+
+@media (min-width: 392px) {
+.cuerpo .derecha .factZone{
+	display:block;
+}
+.cuerpo .derecha .factZone .areaFecha{
+	float:left;
+	 margin-left:1%;
+	 width:220px;
+}
+.cuerpo .derecha .factZone .areaBoton{
+	float:right;
+    margin-right:1%;
+    width:110px;
+}
+.cuerpo .derecha .factZone .areaFecha #rangoOne{
+	width:150px;
+}
+.cuerpo .derecha .factZone .areaFecha #rangOneLab{
+	margin-left:0px;
+}
+
+}
+
+@media (max-width: 391px) {
+	.cuerpo .derecha .factZone .areaFecha{
+		width:165px;
+	}
+.cuerpo .derecha .factZone .areaBoton{
+	width:80px;
+}
+.cuerpo .derecha .factZone .areaFecha #rangoOne{
+	width:90px;
+}
+.cuerpo .derecha .factZone .areaFecha #rangOneLab{
+	width:60px;
+	margin-left:0px;
+}
+.cuerpo .derecha .factZone .areaBoton #facButton{
+	width:80px;
+}
+
+}

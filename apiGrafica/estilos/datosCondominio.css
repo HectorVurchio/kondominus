@@ -1,0 +1,316 @@
+*{margin: 0;font-family: 'Oswald', sans-serif;}
+
+section{
+    /*box-sizing: border-box;*/
+    width: 100vw;
+    padding-top: 12vh;
+    display: flex;
+}
+
+nav{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+nav a{
+    text-decoration: none;
+    color: #333333;
+}
+
+#b0{
+    background-color: #003656;
+    color:#ffffff;
+    letter-spacing: 1.5px;
+}
+
+/* Botones de los lados */
+.botonIzq, .boton{
+    height: 90px;
+    width: 300px;
+    margin-bottom:20px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: #f3f2f0;
+    box-shadow: -10px -10px 15px rgba(255,255,255,0.9), 10px 10px 15px rgba(70,70,70,0.12);
+    border: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton:hover{
+    background-color: greenyellow;
+}
+
+.icon {
+    height: 2.0em;
+    margin: 0 10px 0 -20px;
+}
+
+/* Modulo de Resumen */
+
+.showup{
+    flex-grow: 3;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.resumenDatos{
+    width: 320px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 20px;
+	height:560px;
+}
+
+.modulo{
+    padding-top: 1.9vh;
+    justify-content: normal;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.titulo{
+    box-sizing: border-box;
+    background-color: #003656;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 1.4px;
+    padding: 5px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#titDos{
+    background-color: indianred;
+}
+
+.resumenDatos{
+    box-sizing: border-box;
+    margin: 20px 0 0 0;
+    color: #6b6b6b;
+}
+
+input{
+   background-color: #eee;
+   opacity: 1;
+   color: #333333;
+   font-weight: lighter;
+   font-size: 0.9em;
+}
+
+label{
+    display:flex;
+    align-items: center;
+    color: #003656;
+
+}
+
+/* Tabla lista de propietarios */
+
+.prop,.fdoIni{
+   padding-top: 3vh;
+    justify-content: normal;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lipro{
+    padding:4px;
+    width: 95%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+table{
+    width: 90%;
+    border-collapse: collapse;
+}
+th{
+    background-color: #f3f2f0;
+}
+td, th{
+    text-align: center;
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+
+.ventana{
+    flex: 3;
+    padding-top: 3vh;
+}
+
+#inmueble{
+    width: 70px;
+}
+#propietario{
+    width: 150px;
+}
+#cargo{
+    width: 200px;
+}
+#agregar,#aceptar,#modificar {
+    padding-left: 5px;
+    text-decoration: none;
+}
+
+.fondosIni{
+    width: 320px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.fondosIni label img {
+    margin-right: 0.2em;
+}
+.fondosIni,.multas {
+    display: flex;
+    flex-direction: column;
+}
+
+.multas{
+    width: 320px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.mul{
+    padding-top: 3vh;
+    justify-content: normal;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fondosIni > input,.multas>input{ 
+    margin-bottom: 10px;
+    border: 1px solid grey;
+    background-color:white;
+    font-size: 0.9em;
+    height:1.6em;
+}
+
+#dineroBan,#dineroEfec,#cxc,#fondoR{
+    text-align: right;
+}
+
+#guardar{
+	background-color:#140056;
+	height: 40px;
+	color: #ffffff;
+	border-radius: 6px;
+	font-weight: normal;
+    font-size: 16px;
+}
+
+#guardar:hover{
+    background-color: greenyellow;
+    color: #140056;
+    text-decoration: none;
+}
+
+
+#botoniera{
+    margin-top:40px;
+}
+
+fieldset{
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.ceFiOn{
+	height:30px;
+	border-radius:5px;
+}
+.ceFiTw{
+	height:26px;
+	padding-left:10px;
+	border-radius:5px;
+}
+.fecha{
+	width:80px;
+}
+.form>fieldset:first-child>div>input{
+	margin-left:4px;
+}	
+.info{
+    position: relative;
+}
+.goinf{
+	margin-left:-8%;
+	position: absolute;
+    top: 16%;
+}
+.cambio{
+	float:right;
+	width:140px;
+}
+.avisThreeSubCont :nth-last-child(4) :first-child{
+	width:auto;
+	margin-right:8px;
+}		
+@media screen and (max-width:760px){
+    section{
+        padding-top: 0vh;
+    }
+	.cambio{
+	    width:50px;
+    }
+}
+
+
+
+@media screen and (max-width:420px){
+    section{
+        flex-direction: column;
+        align-items: stretch;
+        padding-top: 0vh;
+    }
+    nav{
+        display: flex;
+        padding: 0;
+        width: auto;
+    }
+    .botonIzq, .boton{
+        width: auto;
+        margin: 10px 5px 10px 5px;
+    }
+    .showup{
+        display: flex;
+        padding: 0;
+        width: auto;
+    }
+	
+	.showup > div {
+        border: none;
+    }
+	
+    .titulo{
+        width: auto;
+    }
+	.lipro{
+        width:90%;
+    }
+    form{
+        margin:auto;
+        width: auto;
+        display: grid;
+    }
+	table{
+        font-size: 0.72em;
+    }
+	fieldset{
+        width: 100%;
+    }
+}

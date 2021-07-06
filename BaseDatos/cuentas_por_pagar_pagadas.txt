@@ -1,0 +1,26 @@
+CREATE TABLE `cuentas_por_pagar_pagadas` (
+  `id_cta` int NOT NULL,
+  `cod_edificio` VARCHAR(20) NOT NULL,
+  `codigo_recibo` varchar(32) NOT NULL,
+  `recibo_numero` varchar(32) NOT NULL,
+  `fecha` date NOT NULL,
+  `cedula` varchar(12) NOT NULL,
+  `concepto` varchar(80) NOT NULL,
+  `monto` double NOT NULL,
+  `tipo_cuenta` varchar(40) NOT NULL,
+  `numero_acceso` varchar(20) NOT NULL,
+  `tipo_pago` varchar(15) NOT NULL,
+  `referencia` varchar(80) NOT NULL,
+  `acceso_paga` varchar(20) NOT NULL,
+  `creada_ant` timestamp NOT NULL,
+  `creada` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  KEY `codigo_recibo` (`codigo_recibo`)
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
+
+ALTER TABLE cuentas_por_pagar_pagadas RENAME COLUMN acceso_borra TO acceso_paga;
+
+ALTER table cuentas_por_pagar_pagadas MODIFY COLUMN id_cta INT NOT NULL;
+ALTER table cuentas_por_pagar_pagadas DROP INDEX `PRIMARY`;
+
+ALTER TABLE cuentas_por_pagar_pagadas ADD COLUMN tipo_pago varchar(15) NOT NULL AFTER numero_acceso; 
+ALTER TABLE cuentas_por_pagar_pagadas ADD COLUMN referencia varchar(80) NOT NULL AFTER tipo_pago;

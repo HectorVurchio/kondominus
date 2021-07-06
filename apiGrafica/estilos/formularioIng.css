@@ -1,0 +1,132 @@
+.zonaIngreso, .zonaRegistro, .zonaRecuperacion{
+    width:300px;
+    min-height: 400px;
+    margin:auto;
+    padding-top:20px;
+	 padding-bottom:20px;
+    background-color: white;
+    border: 1px solid #e2dddd;
+    box-shadow: 0 0px 10px 2px rgba(0, 0, 0, 0.16);
+}
+
+/* Nuvo aqui*/
+.nuevoAqui {
+font-size: 14px;
+color: grey;
+}
+
+/* Texto "Iniciar Sesion" + "Registrarme" */
+.is, #titRec ,.zonaRegistro p{
+   color: #484848;
+   text-align: center;
+   font-size: 20px;
+   font-weight: bold;
+}
+
+/* Registrarme */
+.registrarse{
+   font-size: 15px;
+   padding-left: 15px;
+   color: #0084e2;
+}
+
+.registrarse:link{
+text-decoration: none;
+}
+
+.noReg {
+   padding-top: 20px;
+}
+
+/* Olvide mi contraseña */
+.olvidoCont{ 
+   width: 220px;
+   color:#0084e2;
+   font-size: 15px;
+}
+
+.olvidoCont a:link,a:visited{
+   text-decoration: none;
+   color: #0084e2;
+}
+
+.ingFormular, .regFormular, .recFormular{
+    width: 265px;
+	height:240px;
+	padding-top:20px;
+    margin:auto;
+	border-radius:10px;
+}
+
+ .campoFormular, .campoCedula, .campoFormular2{
+   font-size: 16px;
+   padding: 10px;
+	margin-top:10px;
+	margin-bottom:10px;
+   border-radius:10px;
+   border: 1px solid #e2dddd;
+}
+
+/* Restablecer contraseña */
+.campoFormular2 {
+	margin-top:70px;
+}
+
+.campoFormular, .campoFormular2{width:240px;}
+.campoCedula{width:174px;}
+ 
+.botonIng{
+   width:264px;
+	height:44px;
+   font-size: 16px;
+   font-weight: bold;
+   color: white;
+	margin-top:10px;
+	margin-bottom:20px;
+   border-radius:10px;
+   background-color: #140056;
+   border: 1px solid #e2dddd;
+}
+
+.botonIng:hover{
+   background-color: greenyellow;
+   color: #140056;
+}
+
+@media (max-width: 768px) {
+
+  .ingFormular, .regFormular, .recFormular{
+     width:224px;
+  }
+  .campoFormular, .campoFormular2{
+    width:200px;
+  } 
+  .campoCedula{width:133px;}
+  .botonIng{
+     width:224px;
+  }
+}
+
+@media (max-width: 420px) {
+   .zonaIngreso, .zonaRegistro, .zonaRecuperacion{
+      margin: 0px;
+      width: auto;
+      border-radius: 25px 25px 0 0;
+      border: none;
+      box-shadow: 0px -11px 11px 0px rgba(0, 0, 0, 0.10);
+   }
+  .ingFormular, .regFormular, .recFormular{
+    width:200px;
+  }
+  .campoFormular, .campoFormular2{
+    width:173px;
+  } 
+  .campoCedula{width:110px;}
+  .botonIng{
+     width:200px;
+  }
+}
+/*
+@media (max-width: 299px) {
+   .zonaIngreso, .zonaRegistro{display:none;}
+}

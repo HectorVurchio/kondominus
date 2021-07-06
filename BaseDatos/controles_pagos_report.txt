@@ -1,0 +1,12 @@
+CREATE TABLE `controles_pagos_report` (
+  `id_co` INT NOT NULL AUTO_INCREMENT,
+  `cod_edificio` VARCHAR(20) NOT NULL,
+  `cont_pag_rep` INT NOT NULL,
+  `numero_acceso` varchar(20) NOT NULL,
+  `creada` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id_co`),
+  KEY `cod_edificio` (`cod_edificio`)
+) ENGINE=InnoDB  DEFAULT CHARSET=UTF8MB4 ;
+
+
+tabla de control de los recibos de pago emitidos a los propietarios

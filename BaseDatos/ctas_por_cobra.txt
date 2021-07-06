@@ -1,0 +1,48 @@
+CREATE TABLE `ctas_por_cobrar` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `cod_edificio` VARCHAR(20) NOT NULL,
+  `status` TINYINT NOT NULL,
+  `control` INT NOT NULL,
+  `codigo` varchar(14) NOT NULL,
+  `tipo_gasto` VARCHAR(15) NOT NULL,
+  `fecha` DATE NOT NULL,
+  `monto` double NOT NULL,
+  `recib` DOUBLE NOT NULL,
+  `unidad` VARCHAR(5) NOT NULL,
+  `concepto` VARCHAR(80) NOT NULL,
+  `vencimiento` DATE NOT NULL,
+  `nota` VARCHAR(80) NOT NULL,
+  `numero_acceso` VARCHAR(20) NOT NULL,
+  `creada` DATETIME NOT NULL,
+  `modificada` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `cod_edificio` (`codigo`)
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
+
+
+control : el mismo del recibo de cobro;
+codigo : el mismo del recibo de cobro;
+monto : el total de lacuenta por cobrar
+recib : pago recibido de esta deuda
+
+status 0: cuando el recibo se emite y no se ha recibido ningun pago
+status 1: cuando se ha abonado dinero a esta deuda
+status 2: cuenta pagada en su totalidad
+
+tipo_gasto: por ejemplo 0.1.1-CPCPA que corresponde al cod_cta de la tabla cuentas_contabilidad;
+
+
+ALTER TABLE ctas_por_cobrar RENAME COLUMN cod_propietario TO unidad;
+ALTER TABLE ctas_por_cobrar MODIFY COLUMN unidad VARCHAR(10) NOT NULL;
+UPDATE ctas_por_cobrar SET unidad = '1A' WHERE id = 1;
+ALTER TABLE ctas_por_cobrar MODIFY COLUMN vencimiento DATE NOT NULL;
+ALTER TABLE ctas_por_cobrar DROP COLUMN vencimiento;
+ALTER TABLE ctas_por_cobrar ADD COLUMN vencimiento DATE NOT NULL AFTER concepto;
+UPDATE ctas_por_cobrar SET vencimiento = '2021-02-02'; 
+ALTER TABLE ctas_por_cobrar RENAME COLUMN tipo_cobro TO tipo_gasto;
+UPDATE ctas_por_cobrar SET codigo = 'COBRO202102000'
+INSERT INTO `ctas_por_cobrar_propietarios` (`cod_edificio`,`codigo_cpcp`,`cod_cta_cont`, `nombre_cta`,`monto`) VALUES
+();
+
+ALTER TABLE ctas_por_cobrar ADD COLUMN recib DOUBLE NOT NULL AFTER monto;
+

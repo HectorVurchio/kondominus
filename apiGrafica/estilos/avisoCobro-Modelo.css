@@ -1,0 +1,126 @@
+        *{
+            box-sizing: border-box;
+            margin: 5px;
+            font-size: 12px; 
+            font-family: 'Oswald', sans-serif;
+        }
+        .header{
+            display: flex;
+            justify-content: space-between;
+            flex-basis: 33.33%;
+            flex-grow: 0;
+        }
+        .datosCondo::first-line{
+            font-size: 2.2em;
+            font-weight: bold;
+            color: #140056;
+        }
+        .datosCondo{
+            color: #4b4f4f;
+            font-size: 10px;
+        }
+        .header > p{
+            font-size: 2.2em;
+            font-weight: bolder;
+            letter-spacing: 3px;
+            padding-top: 1.5em;
+        }
+        .datosAC > div:nth-child(2) > div:nth-child(2){
+            color: blue;
+        }
+         .datosAC > div:nth-child(2) > div:nth-child(4){
+            color: red;
+        }
+        .datosAC > div:first-child{
+            box-sizing: border-box;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 0px;
+            color: #140056;
+            background-color: gold;
+            border-radius: 4px;
+            padding: 4px;
+			text-align:center;
+        }
+        
+	    .subHeader > div, .subHeader > div > div{
+            display: flex;
+            padding-right: 10px;
+            justify-content: space-between;   
+        }
+		
+        .datosProp{
+            background-color: #e2dfdf;
+            margin-bottom: 8px;
+        }
+        .subHeader > div > div > div:nth-child(2){
+            font-weight: bold;
+            margin-left: 4px;
+            text-transform: uppercase;
+        }
+        table{
+            width:98%;
+            margin: auto;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        .tablaFR td{
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 0;
+        }
+        .descripcion,.totalG{
+            text-align: left;
+        }
+        .subTotales{
+            background-color: #f3f3f3;
+        }
+        .monto,.cuota,.sumaMonto,.sumaCuota,.montoFR,.cuotaFR,.sumaMontoT,.sumaCuotaT,.saldoAnterioFR,.cargosFR,.saldoFR{
+            text-align: right;
+        }
+        th{
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+            background-color: #e2dfdf;
+        }
+        td {
+            padding: 5px;
+            text-align: left;
+        }
+        .totales{
+            background-color: #e2dfdf;
+        }
+        .inferior{
+            display: flex;
+            justify-content: flex-end;
+
+        }
+        .aPagar{
+            display: flex;
+            justify-content: flex-end;
+            font-weight: bolder;
+            color: #140056;
+            background-color: gold;
+            border: 1px solid black;
+            width: fit-content;
+        }
+        .title.uno,.sumaCuotaT{
+            font-size: 1.5em;
+        }
+        .footer{
+            box-sizing: border-box;
+            margin: 5px;   
+        }
+        .notas{
+            border: 1px solid black;
+            display: flex;
+        }
+        .notaPP{
+            font-size: 1.25rem;
+        }
+        @media screen and (max-width:420px){
+            *,.notaPP{
+                font-size: 0.8em;
+            }
+        }

@@ -1,0 +1,201 @@
+   .derecha{
+	display:block;
+	background-color:#33ccff;
+	width: 100%;
+	height:780px;
+	}
+	
+	
+	.cuerpo .derecha .genAvis{
+	   height:90px;
+	   padding-top:15px;
+	   padding-bottom:15px; 
+	}
+	
+	.cuerpo .derecha .genAvis .subGenAvis{
+	    display:flex;
+	    flex-wrap:wrap;
+	    align-content: space-between;
+	    justify-content:certer;
+	    width:90%;
+	    height:90px;
+		margin-left:5%;
+		background-color:#0a5c77;
+		border-style: solid;
+        border-width: 0px;
+	    border-radius: 10px 10px 10px 10px;	
+	}
+	
+	.cuerpo .derecha .genAvis .subGenAvis .genPeriod{
+	 height:40px;
+	 width:210px;
+	 margin: auto;
+	}
+	
+	.cuerpo .derecha .genAvis .subGenAvis .genPeriod #perOneLab{
+		 color:#333;
+	 	 display:inline-block;
+	 	 float:left;
+	 	 background-color:#d9d9d9;
+	 	 padding-top:10px;
+	 	 text-align:center;
+	 	 padding-bottom:4px;
+	 	 padding-right:4px;
+	 	 padding-left:4px;
+	 	 border-radius: 5px 0px 0px 5px;
+	 	 height:20px;
+	}
+	
+	.cuerpo .derecha .genAvis .subGenAvis .genPeriod #perOne{
+	    width: 140px;
+	    height:34px;
+		font-size: 18px;
+	    display:inline-block;
+	    float:left;
+	    border-radius: 0px 5px 5px 0px;	
+	}
+	
+	.cuerpo .derecha .genAvis .subGenAvis .genArea{
+	  margin: auto;
+	}
+	
+	.cuerpo .derecha .genAvis .subGenAvis .genArea #genButton{
+	 display:inline-block;
+	 float:right;
+	 width:210px;
+	 height:33px;
+	 font-size: 18px;
+	 border-radius: 5px 5px 5px 5px;
+	 color:#333;	
+	}
+	
+	.cuerpo .derecha .areaFacturas{
+	  display:block;
+	  border-style: solid;
+      border-width: 0px;
+	  border-radius: 10px 10px 10px 10px;
+	  margin: auto;
+	  overflow: auto;
+	  background-color:#ffffff;
+	  margin-top:20px;
+	  width: 90%;
+	  height:500px;
+	}
+	
+	.cuerpo .derecha .factZone{
+	 margin: auto;
+	 display:flex;
+	 flex-wrap:wrap;
+	 align-content: space-between;
+	 justify-content:certer;
+	 height:100px;
+	 width:90%;
+	}
+
+    .cuerpo .derecha .factZone .areaFecha{
+	 height:50px;
+	 width:300px;
+	 margin: auto;
+	 }
+	 
+	.cuerpo .derecha .factZone .areaBoton{
+	 height:50px;
+     width:300px;
+     margin: auto;	 
+	}
+	
+	.cuerpo .derecha .factZone .areaFecha #rangOneLab{
+	 color:#333;
+	 display:inline-block;
+	 float:left;
+	 background-color:#d9d9d9;
+	 margin-left:5%;
+	 margin-top:3%;
+	 padding-top:10px;
+	 text-align:center;
+	 padding-bottom:4px;
+	 padding-right:4px;
+	 padding-left:4px;
+	 border-radius: 5px 0px 0px 5px;
+	 height:20px;
+	}
+	
+	.cuerpo .derecha .factZone .areaFecha #rangoOne{
+	 width: 200px;
+	 height:30px;
+	 display:inline-block;
+	 float:left;
+	 margin-top:3%;
+	 border-radius: 0px 5px 5px 0px;
+	}
+	
+
+	
+	.cuerpo .derecha .factZone .areaBoton #facButton{
+	 display:inline-block;
+	 float:right;
+	 margin-right:5%;
+	 margin-top:10%;
+	 width:100px;
+	 height:33px;
+	 border-radius: 5px 5px 5px 5px;
+	 color:#333;
+	}
+	
+	
+ @media (min-width: 1000px) {
+
+   	.izquierda{
+	   margin-left:30px;
+	}
+	
+	.derecha {
+	   	width: 80%;
+		margin:auto;
+	}
+	
+	.cuerpo .derecha #facButton{
+	  margin-right:5%;
+	}
+
+}
+
+@media (min-width: 466px) {
+    .cuerpo .derecha .genAvis{
+	   height:70px;
+	}
+	.cuerpo .derecha .genAvis .subGenAvis{
+	   height:70px;
+	}
+
+    .cuerpo .derecha .genAvis .subGenAvis .genPeriod{
+       margin-top:15px;
+	}
+	
+    .cuerpo .derecha .genAvis .subGenAvis .genArea{
+       margin-top:15px;
+	}
+	
+    .cuerpo .derecha .factZone .areaFecha{
+	 height:100px;
+	 width:70%;
+	 }
+	 
+	.cuerpo .derecha .factZone .areaBoton{
+	 height:100px;
+     width:30%;	 
+	}
+
+}
+
+@media (max-width: 320px) {
+ 	.cuerpo .derecha .factZone .areaFecha #rangoOne{
+	 width: 150px;
+	}
+	
+	.cuerpo .derecha .factZone .areaBoton #facButton{
+	 float:left;
+	 margin-left:58%;
+	 width:75px;
+	}
+}

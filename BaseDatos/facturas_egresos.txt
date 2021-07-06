@@ -1,0 +1,98 @@
+CREATE TABLE `facturas_egresos` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `cod_edificio` VARCHAR(20) NOT NULL,
+  `status` TINYINT NOT NULL,
+  `control` INT NOT NULL,
+  `codigo` VARCHAR(14) NOT NULL,
+  `tipo_gasto` varchar(15) NOT NULL,
+  `fecha` date NOT NULL,
+  `exento` DOUBLE NOT NULL,
+  `iva` DOUBLE NOT NULL,
+  `base_imponible` DOUBLE NOT NULL,
+  `monto` DOUBLE NOT NULL,
+  `rif` varchar(12) NOT NULL,
+  `tipo_pago` varchar(15) NOT NULL,
+  `referencia` varchar(80) NOT NULL,
+  `fac_numero` varchar(32) NOT NULL,
+  `concepto` varchar(80) NOT NULL,
+  `numero_acceso` varchar(20) NOT NULL,
+  `creada` DATETIME NOT NULL,
+  `modificada` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `cod_edificio` (`codigo`)
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
+
+ 
+EXPLICACION DE LOS STATUS:
+status 0: Corresponde a los EGRESOS que deben relacionarse en el proximo RECIBO DE COBRO para ser pagado por los propietarios.
+status 1: Corresponde a los EGRESOS que fueron cobrados en las provisiones del recibo anterior al ultimo y deben solo presentarse a titulo informativo, no para ser cobrados.
+Status 2: Corresponde a los Egresos ya relacionados en el ultimo recibo cuyo status anterior fue 0.
+Status 3: Corresponde a los Egresos ya relacionados en el ultimo recibo cuyo status anterior fue 1.
+
+EXPLICACION DEL CODIGO:
+EGRESOaaaamm    : codigo utilizado en egresos no relacionados en recibos de cobro. (aaaa = 4 digitos del ano, mm = 2 digitos del mes).
+COBROaaaammccc : codigo utilizado en egresos relacionados en recibos de cobro. (ccc = 3 digitos del control del recibo de cobro).
+
+
+ 
+ LOAD DATA INFILE "C:/ProgramData/MySQL/MySQL Server 8.0/Uploads/facturas.csv"
+ INTO TABLE facturas
+ FIELDS TERMINATED BY ";" ENCLOSED BY '"'
+ LINES TERMINATED BY '\r\n'
+ IGNORE 1 LINES;
+ 
+ 
+ALTER TABLE facturas ADD COLUMN creada timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP;
+
+ALTER TABLE facturas ADD COLUMN iva double NOT NULL AFTER concepto;
+
+ALTER TABLE facturas ADD COLUMN cod_edificio VARCHAR(20) NOT NULL AFTER id_facturas;
+
+UPDATE facturas SET cod_edificio = 'J-365489527' WHERE 1;
+
+ALTER TABLE facturas_egresos ADD COLUMN cont_numero INT NOT NULL AFTER fac_numero;
+
+
+INSERT INTO `facturas` (`id_facturas`,`codigo_facturas`, `fecha`,`rif`,`fac_numero`,`concepto`,`iva`,`monto`,`tipo_gasto`) VALUES
+('4','RCCGF202001','2020-01-28','J-303954983','1023','Suminstro Banos Vigilancia y Sala Fiesta','16','724.24','Fijo'),
+('5','RCCGF202001','2020-01-29','J-425963527','2013','Suministro Papeleria para Administracion','16','580','Fijo'),
+('6','RCCGF202001','2020-01-07','J-351236589','584','Suministro Materiales para Iluminacion','16','365.4','Fijo'),
+('7','RCCGV202001','2020-01-03','J-303954983','9083','Reparacion Lavamanos Vigilancia Materiales','16','103.24','Variable'),
+('8','RCCGV202001','2020-01-26','J-751258963','1015','Reparacion Impulsor Bomba  Mano Obra','16','232','Variable'),
+('9','RCCGV202001','2020-01-17','J-404236891','3095','Reparacion Puerta Ascensor Mat y MO','16','125.28','Variable'),
+('10','RCCGF202001','2020-01-17','J-404236891','3094','Mantenimiento Ascensores','16','580','Fijo'),
+('11','RCCGF202001','2020-01-05','J-965321897','4467','Suministro para Recoleccion Basura','16','357.28','Fijo'),
+('12','RCCGV202001','2020-01-25','J-236548924','5032','Reparacion Bomba  Materiales','16','464','Variable'),
+('13','RCCGF202001','2020-01-20','V-10258321','23','Honorarios Administracion','16','116','Fijo'),
+('14','RCCGF202001','2020-01-21','J-258963908','2009','Servicio de Vigilancia Diurno y Nocturno','16','301.6','Fijo'),
+('15','RCCGF202001','2020-01-10','J-963582216','125','Suministro Articulos de Limpieza','16','11.36','Fijo'),
+('16','RCCGF202002','2020-02-07','J-351236589','1120','Suministro Materiales para Iluminacion','16','176.32','Fijo'),
+('17','RCCGV202002','2020-02-04','J-30395483','24635','Suministro Materiales Reparacion Filtracion','16','172.84','Variable'),
+('18','RCCGF202002','2020-02-04','J-303954983','8896','Suministro Articulos de Limpieza','16','70.76','Fijo'),
+('19','RCCGF202002','2020-02-07','J-872663252','43652','Suminsstro para Recoleccion Basura','16','528.96','Fijo'),
+('20','RCCGV202002','2020-02-21','J-303954983','5213','Servicio de Vigilancia Diurno y Nocturno','16','301.6','Fijo'),
+('21','RCCGF202002','2020-02-19','J-303954983','4452','Mantenimiento Porton Electrico','16','139.2','Fijo'),
+('22','RCCGF202002','2020-02-20','V-10258321','21','Honorarios Administracion','16','116','Fijo'),
+('23','RCCGF202002','2020-02-17','J-404236891','2154','Mantenimiento Ascensores','16','222','Fijo'),
+('24','RCCGV202003','2020-03-13','J-158915294','7962','Fumigacion','16','232','Variable'),
+('25','RCCGV202003','2020-03-18','J-158047027','7139','Recarga Extintores','16','167.04','Variable'),
+('26','RCCGV202003','2020-03-18','J-658283971','5521','Medicinas Senor Jose Miguel Torres (Conserje)','0','920','Variable'),
+('27','RCCGV202003','2020-03-11','J-236521479','7765','Consulta Medica Sr Jose M Torres (conserje)','0','255.32','Variable'),
+('28','RCCGF202003','2020-03-21','J-258963908','5250','Servicio de Vigilancia Diurno y Nocturno','16','301.6','Fijo'),
+('29','RCCGF202003','2020-03-20','V-10258321','23','Honorarios Administracion','16','116','Fijo'),
+('30','RCCGV202003','2020-03-18','J-158915294','3978','Compra camaras y cable para instalacion','16','324.8','Variable'),
+('31','RCCGV202003','2020-03-20','V-11446321','21','Honorarios Abogado ','16','116','Variable'),
+('32','RCCGV202003','2020-03-25','J-236548924','4698','Reparacion Bomba SCI Materiales','16','1044','Variable'),
+('33','RCCGV202003','2020-03-26','J-751258963','1136','Reparacion Bomba SCI Mano Obra','16','348','Variable'),
+('34','RCCGV202003','2020-03-07','J-943561859','8811','Compras para rehabilitacion de banos','16','313.2','Variable'),
+('35','RCCGF202003','2020-03-04','J-417561232','24635','Mantenimiento Filtro de agua','16','493','Fijo'),
+('36','RCCGF202003','2020-03-28','J-561896328','1023','Suminstro Banos Vigilancia y Sala Fiesta','16','1023','Fijo'),
+('37','RCCGF202003','2020-03-17','J-872663252','43865','Suminsstro para Recoleccion Basura','16','371.2','Fijo'),
+('38','RCCGF202003','2020-03-17','J-404236891','987','Mantenimiento Ascensores','16','580','Fijo'),
+('39','RCCGF202003','2020-03-10','J-963582216','8903','Suministro Articulos de Limpieza','16','74.24','Fijo');
+
+ALTER TABLE facturas MODIFY COLUMN tipo_gasto VARCHAR(15) NOT NULL;
+
+ALTER TABLE facturas ADD COLUMN tipo_pago VARCHAR(15) NOT NULL AFTER tipo_gasto;
+
+ALTER TABLE facturas ADD COLUMN referencia VARCHAR(80) NOT NULL AFTER tipo_pago;

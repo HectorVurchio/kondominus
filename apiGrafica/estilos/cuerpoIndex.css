@@ -1,0 +1,76 @@
+body {
+  font-family: 'Oswald', sans-serif;
+  background-color: #f4f4f4;
+  margin:0;
+}
+.resolucion{
+	display:none;
+}
+
+/* Contenedor interno de cuentas */
+.dDos {
+	text-align: center;
+	padding-top: 14vh;
+	padding-bottom: 40%; /*Revisar cuando cambie "la home" */
+	background-color: #fff;
+  }
+
+/* Botones de Cuenta */ 
+.buttonCta{
+    color: #e0e0e0;
+    width: 500px;
+	font-family: 'Oswald', sans-serif;
+	font-size: 16px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: #140056;
+    border: 1px solid #e2dddd;
+    height: 44px;
+    box-shadow: 0 0px 10px 3px rgba(0, 0, 0, 0.16);
+}
+
+.buttonCta:hover{
+	background-color:greenyellow;
+	font-weight: bold;
+	color: #140056;
+	font-size: 19px;
+}
+
+.rowOneCta{
+	background-color:inherit;
+	color:#292a25;
+	font-size:25px;
+	margin-bottom: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .cuerpoFoto{ width:100%;}
+}
+
+@media screen and (max-width: 508px) {
+	.buttonCta{
+		width: 100%;
+	}
+	.dDos{
+		height: 1vh;
+	}
+}
+
+@media screen and (max-width: 420px){
+.dDos{
+	width: 100%;
+	height: 1vh;
+	align-content: flex-end;}
+.rowCta{
+	width: 100%;}
+.buttonCta { 
+	width: 100%;
+	margin-top: 15px !important;
+	margin: auto;}
+.buttonCta:hover{
+	font-size: 16px;}
+
+@media (max-width: 299px) {
+   .dDos{display:none;} 
+   .resolucion{display:block;text-align:center;padding-top:250px;}
+}

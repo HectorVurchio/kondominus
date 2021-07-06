@@ -1,0 +1,15 @@
+CREATE TABLE `ctas_por_cobrar_cobradas` (
+  `id_cpcc` int NOT NULL AUTO_INCREMENT,
+  `cod_edificio` VARCHAR(20) NOT NULL,
+  `cod_propietario` varchar(20) NOT NULL,
+  `codigo_cpcp` varchar(32) NOT NULL,
+  `fecha` date NOT NULL,
+  `codigo_cpcc` varchar(32) NOT NULL,
+  `cod_cta_cont` varchar(12) NOT NULL,
+  `nombre_cta` varchar(80) NOT NULL,
+  `monto` double NOT NULL,
+  `numero_acceso` varchar(20) NOT NULL,
+  `creada` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id_cpcc`),
+  KEY `cod_propietario` (`codigo_cpcp`)
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;

@@ -1,0 +1,25 @@
+CREATE TABLE `multa_int_cobrados` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `cod_edificio` VARCHAR(20) NOT NULL,
+  `control` INT NOT NULL,   
+  `codigo` VARCHAR(14) NOT NULL,
+  `tipo_gasto` VARCHAR(15) NOT NULL,
+  `unidad` VARCHAR(5) NOT NULL,
+  `fecha` DATE NOT NULL,
+  `dias` INT NOT NULL,
+  `tasaInt` FLOAT NOT NULL,
+  `interes` DOUBLE NOT NULL,
+  `multa` DOUBLE NOT NULL,
+  `numero_acceso` VARCHAR(20) NOT NULL,
+  `creada` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `cod_edificio` (`codigo`)
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
+ 
+control: el del control pago 
+codigo: REPOYYYYMM1A
+tasaInt: tasa de interes aplicada al monto de la deuda; 
+interes: monto del interes cobrado
+multa: monto de la multa cobrada
+dias: dias trancurridos desde el vencimiento
+tipo_gasto: '4.0.3-PIPRO'

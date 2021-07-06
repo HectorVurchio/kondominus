@@ -1,0 +1,23 @@
+CREATE TABLE `dinero_en_bancos` (
+  `id_cta` int NOT NULL AUTO_INCREMENT,
+  `cod_edificio` VARCHAR(20) NOT NULL,
+  `fecha` date NOT NULL,
+  `recibo_numero` INT NOT NULL,
+  `monto` double NOT NULL,
+  `codigo_cpcp` varchar(14) NOT NULL,
+  `cod_cta` varchar(12) NOT NULL,
+  `numero_acceso` varchar(20) NOT NULL,
+  `creada` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id_cta`),
+  KEY `cod_edificio` (`codigo_cpcp`)
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
+
+ALTER TABLE dinero_en_bancos DROP COLUMN recibo_numero;
+ALTER TABLE dinero_en_bancos ADD COLUMN recibo_numero  INT NOT NULL AFTER fecha;
+
+codigo_cpcp: por ejemplo INGRESO202102 que relaciona el origen del registro;
+codigo_cpcp: PROPaaaamm____ los ultimos cuatro digitos se reservan para la unidad del inmueble cuando fue por un pago propietario
+codigo_cpcp: "FACTURAS${ano}${mes}" proveniente de una factura pagada
+codigo_cpcp: "RECIBOS${ano}${mes}" proveniente de un recibo pagado
+recibo_numero: numero entero del instrumento de pago que fue utilizado para el registro;
+cod_cta: por ejemplo 0.1.2-DIBAP correspondiente cod_cta de la tabla cuentas_contabilidad utilizado por el instrumento utilizado par el registro;

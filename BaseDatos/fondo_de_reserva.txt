@@ -1,0 +1,27 @@
+CREATE TABLE `fondo_de_reserva` (
+  `id_cta` int NOT NULL AUTO_INCREMENT,
+  `cod_edificio` VARCHAR(20) NOT NULL,
+  `fecha` date NOT NULL,
+  `recibo_numero` INT NOT NULL,
+  `monto` double NOT NULL,
+  `codigo_cpcp` varchar(14) NOT NULL,
+  `cod_cta` varchar(12) NOT NULL,
+  `numero_acceso` varchar(20) NOT NULL,
+  `creada` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id_cta`),
+  KEY `cod_edificio` (`codigo_cpcp`)
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
+
+
+
+codigo_cpcp: por ejemplo INGRESO202102 que relaciona el origen del registro;
+recibo_numero: numero entero del instrumento de pago que fue utilizado para el registro;
+cod_cta: por ejemplo 0.1.2-DIBAP correspondiente cod_cta de la tabla cuentas_contabilidad utilizado por el instrumento utilizado par el registro;
+
+
+ALTER TABLE fondo_de_reserva ADD COLUMN concepto VARCHAR(80) NOT NULL AFTER recibo_numero;
+ALTER TABLE fondo_de_reserva DROP COLUMN concepto;
+
+
+ALTER TABLE fondo_de_reserva DROP COLUMN recibo_numero;
+ALTER TABLE fondo_de_reserva ADD COLUMN recibo_numero  INT NOT NULL AFTER fecha;

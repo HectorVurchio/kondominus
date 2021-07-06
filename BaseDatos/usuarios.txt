@@ -1,0 +1,22 @@
+CREATE TABLE usuarios (
+  id int NOT NULL AUTO_INCREMENT,
+  Nombre varchar(32) NOT NULL,
+  Apellido varchar(32) NOT NULL,
+  Correo varchar(64) NOT NULL,
+  Clave varchar(512) NOT NULL,
+  CodigoAcceso TEXT NOT NULL,
+  Cedula varchar(14) NOT NULL,
+  Estatus int NOT NULL COMMENT '0=pending,1=confirmed',
+  Creada datetime NOT NULL,
+  Modificada timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4 COMMENT='admin and customer users';
+
+
+ALTER TABLE usuarios MODIFY COLUMN Cedula VARCHAR(14) NOT NULL;
+
+INSERT INTO usuarios SET Nombre = 'No',Apellido = 'Registrado',Correo='noregistrado@dominio.com'
+
+UPDATE usuarios SET Nombre = 'Persona', Apellido = 'No Definida', Correo = 'personanodefinida@dominio.com' WHERE Cedula = 'V-00000000';
+
+SELECT cargo,unidad,inicio,usuarios.Nombre,usuarios.Apellido,usuarios.Correo,usuarios.Cedula FROM junta_de_condominio LEFT JOIN usuarios ON junta_de_condominio.representante = usuarios.Cedula WHERE junta_de_condominio.cod_edificio = 'J-158899563' AND junta_de_condominio.periodo= 0;

@@ -1,0 +1,89 @@
+CREATE TABLE `cuentas_contabilidad` (
+  `id_cta` INT NOT NULL AUTO_INCREMENT,
+  `cod_cta` varchar(12) NOT NULL,
+  `grupo` varchar(12) NOT NULL,
+  `tipo_cta` varchar(12) NOT NULL,
+  `nombre_cta` varchar(50) NOT NULL,
+  `mod_emi` varchar(20) NOT NULL,
+  `forma` varchar(20) NOT NULL,
+  PRIMARY KEY (`id_cta`),
+  KEY `cod_cta` (`cod_cta`)
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
+
+
+INSERT INTO `cuentas_contabilidad` (`id_cta`,`cod_cta`, `grupo`,`tipo_cta` ,`nombre_cta`,`mod_emi`,`forma`) VALUES
+('1','0.1.1-CPCPA','cero','Activo','Propietarios Apertura','recibos','Por Cobrar'),
+('2','0.1.2-DIBAP','cero','Activo','Banco Apertura','dinero','cobrada'),
+('3','0.1.3-DIEAP','cero','Activo','Efectivo Apertura','dinero','cobrada'),
+('4','0.1.4-DIFRE','cero','Activo','Fondo Reserva Apertura','dinero','cobrada'),
+('5','0.1.5-CPPAP','cero','Pasivo','Cuentas Por Pagar Apertura','recibo/factura','Por Pagar'),
+('6','0.1.6-PROAP','cero','Pasivo','Cuentas de Provisiones Apertura','recibo/factura','Por Pagar'),
+('7','0.2.1-DBCAR','cero','Pasivo','Banco Cargo','dinero','Pagada'),
+('8','0.2.2-DECAR','cero','Pasivo','Efectivo Cargo','dinero','Pagada'),
+('9','0.2.3-FRCAR','cero','Pasivo','Fondo Reserva Cargo','dinero','Pagada'),
+('10','0.3.1-DBABO','cero','Activo','Banco Abono','dinero','cobrada'),
+('11','0.3.2-DEABO','cero','Activo','Efectivo Abono','dinero','cobrada'),
+('12','0.3.3-FRABO','cero','Activo','Fondo Reserva Abono','dinero','cobrada'),
+('13','0.3.4-PRODE','cero','Activo','Provisiones Devolucion','dinero','cobrada'),
+('14','1.1.1-CPCPR','uno','Activo','Cuentas Por Cobrar Propietarios','recibos','Por Cobrar'),
+('15','1.1.2-IPCPR','uno','Activo','Intereses Por Cobrar Propietarios','recibos','Por Cobrar'),
+('16','1.1.3-CPCPP','uno','Activo','Cuentas Por Cobrar Prestamos al Personal','recibos','Por Cobrar'),
+('17','1.2.1-CCOPR','dos','Activo','Cuentas Cobradas Propietarios','recibos','cobrada'),
+('18','1.2.2-ICOPR','dos','Activo','Intereses Cobrados Propietarios','recibos','cobrada'),
+('19','1.2.3-CPCPP','dos','Activo','Cuentas Por Cobrar Prestamos al Personal','recibos','cobrada'),
+('20','2.1.1-GDADM','tres','Pasivo','Gasto de Administracion','factura','Pagada'),
+('21','2.1.2-GLIMP','tres','Pasivo','Gasto de Limpieza','factura','Pagada'),
+('22','2.1.3-GSEGU','tres','Pasivo','Gasto de Seguridad','factura','Pagada'),
+('23','2.1.4-GSEBA','tres','Pasivo','Gasto de Servicios Basicos','factura','Pagada'),
+('24','2.1.5-GCONS','tres','Pasivo','Gasto de Mantenimiento','factura  ','Pagada'),
+('25','2.1.6-GMEJO','tres','Pasivo','Gasto de Mejora','factura  ','Pagada'),
+('26','2.2.1-GSYSA','Cuatro','Pasivo','Gasto de Sueldos y Salarios','recibo','Pagada'),
+('27','2.2.2-GDCSO','Cuatro','Pasivo','Gasto de Cargas Sociales','recibo','Pagada'),
+('28','2.2.3-PAPER','Cuatro','Pasivo','Prestamos Al Personal','recibo','Pagada'),
+('29','2.2.4-GVARI','Cuatro','Pasivo','Gastos Varios','recibo','Pagada'),
+('30','2.3.1-CPPPR','cinco','Pasivo','Por Pagar Proveedores','recibos','Por Pagar'),
+('31','2.3.2-CPPCS','cinco','Pasivo','Por Pagar Cargas Sociales','recibos','Por Pagar'),
+('32','2.3.3-CPPII','cinco','Pasivo','Por Pagar Impuesto Inmobiliario','recibos','Por Pagar'),
+('33','2.3.4-CPPSE','cinco','Pasivo','Por Pagar Servicios','recibos','Por Pagar'),
+('34','2.3.5-CPPPN','cinco','Pasivo','Por Pagar Personas','recibos','Por Pagar'),
+('35','2.3.6-CPPPT','cinco','Pasivo','Por Pagar Propietarios','recibos','Por Pagar'),
+('36','3.1.1-ATTEL','seis','Pasivo','Atención Telefónica','recibo/factura','Pagada'),
+('37','3.1.2-CACUE','seis','Pasivo','Cancelación de cuentas','recibo/factura','Pagada'),
+('38','3.1.3-CDPFF','seis','Pasivo','Cheques devueltos por falta de fondos','recibo/factura','Pagada'),
+('39','3.1.4-COSAL','seis','Pasivo','Consulta de Saldos','recibo/factura','Pagada'),
+('40','3.1.5-CULMO','seis','Pasivo','Consulta de Últimos Movimientos','recibo/factura','Pagada'),
+('41','3.1.6-CUMAM','seis','Pasivo','Cuota de Mantenimiento Mensual','recibo/factura','Pagada'),
+('42','3.1.7-DEPOS','seis','Pasivo','Depósitos','recibo/factura','Pagada'),
+('43','3.1.8-EMICH','seis','Pasivo','Emisión de Chequeras','recibo/factura','Pagada'),
+('44','3.1.9-EMECU','seis','Pasivo','Emisión de Estados de Cuenta','recibo/factura','Pagada'),
+('45','3.2.1-METEX','seis','Pasivo','Mensajeria de Texto Mensualidad','recibo/factura','Pagada'),
+('46','3.2.2-PASER','seis','Pasivo','Pago de Servicios','recibo/factura','Pagada'),
+('47','3.2.3-POPTE','seis','Pasivo','Pagos por operador telefónico','recibo/factura','Pagada'),
+('48','3.2.4-RINFO','seis','Pasivo','Rechazo por insuficiencia de Fondos','recibo/factura','Pagada'),
+('49','3.2.5-RETIR','seis','Pasivo','Retiros','recibo/factura','Pagada'),
+('50','3.3.1-SUCHA','seis','Pasivo','Suspensión de Chequeras','recibo/factura','Pagada'),
+('51','3.3.2-SUCHE','seis','Pasivo','Suspensión de Cheques','recibo/factura','Pagada'),
+('52','3.4.1-TROTI','seis','Pasivo','Transferencias a cuentas de otro titular','recibo/factura','Pagada'),
+('53','3.4.2-TRMTU','seis','Pasivo','Transferencias entre cuentas del mismo titular','recibo/factura','Pagada'),
+('54','4.0.1-APFCO','siete','Activo','Abono Propietario a los Fondos Del Condominio','recibo/factura','Pagada'),
+('55','4.0.2-PAPRO','siete','Activo','Pago Propietario Recibo de Cobro','recibo/factura','Pagada'),
+('56','4.0.3-PIPRO','siete','Activo','Pago Multa E Interes Propietario Por Mora','recibo/factura','Pagada');
+
+UPDATE cuentas_contabilidad SET nombre_cta = 'Gastos Varios' WHERE id_cta='16';
+
+UPDATE cuentas_contabilidad SET cod_cta = '2.3.5-CPPPN' WHERE id_cta='21';
+UPDATE cuentas_contabilidad SET cod_cta = '2.3.6-CPPPT' WHERE id_cta='22';
+
+UPDATE cuentas_contabilidad SET nombre_cta = 'Por Pagar Proveedores' WHERE id_cta='17';
+UPDATE cuentas_contabilidad SET nombre_cta = 'Por Pagar Cargas Sociales' WHERE id_cta='18';
+UPDATE cuentas_contabilidad SET nombre_cta = 'Por Pagar Impuesto Inmobiliario' WHERE id_cta='19';
+UPDATE cuentas_contabilidad SET nombre_cta = 'Por Pagar Servicios' WHERE id_cta='20';
+UPDATE cuentas_contabilidad SET nombre_cta = 'Por Pagar Personas' WHERE id_cta='21';
+UPDATE cuentas_contabilidad SET nombre_cta = 'Por Pagar Propietarios' WHERE id_cta='22';
+
+UPDATE cuentas_contabilidad SET tipo_cta = 'Activo' WHERE tipo_cta = 'Ingesos';
+UPDATE cuentas_contabilidad SET tipo_cta = 'Pasivo' WHERE tipo_cta = 'Egresos';
+
+ALTER TABLE cuentas_contabilidad MODIFY nombre_cta VARCHAR(50) NOT NULL;
+
+

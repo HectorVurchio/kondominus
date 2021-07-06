@@ -1,0 +1,58 @@
+.avisThreeCont{
+    display:flex;
+	margin:auto;
+	background-color: #ffffff;
+	font-size: 18px;
+    color:#003656;
+    width:90%;	
+    text-align:center;  
+    padding-top:20px;
+	padding-bottom:10px;
+	border: 1px solid #272c2d;
+	box-shadow: 0 10px 10px 0 #0a0a0a;
+	border-radius:10px; 
+}
+.avisThreeSubCont{
+	height:auto;
+	width:90%;
+	padding-bottom:40px;
+	margin:auto;
+}
+.avisThrFil{
+	display:flex;
+	height:30px;
+	margin:auto;
+	margin-top:0px;
+}
+.avisThrFil:nth-child(1) {
+    flex-direction: row-reverse;
+}
+.avisThrFil:first-child :nth-child(1){
+	background-color:#003656;
+	color:white;
+	font-size:16px;
+	font-weight:bold;
+}
+.avisThrFil:last-child {
+    justify-content: center;
+	margin-top:40px;
+    height:40px;
+}
+.avisThrFil:last-child :nth-child(1){
+    width:40%;
+    height:40px;
+    background-color:#003656;
+    box-shadow: 0 10px 10px 0 #0a0a0a;
+	border-radius:10px;
+	font-size: 16px;
+	color:white;
+}
+
+.avisThrFil:last-child :nth-child(1):hover{
+	background-color:greenyellow;
+	font-size: 20px;
+}
+.avisThrCol-0{
+	display:flex;
+	width:33%;
+}

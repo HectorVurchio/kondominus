@@ -1,0 +1,153 @@
+#dialogoverlay{
+	display: none;
+	/*opacity: .8;*/
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background: #FFF;
+	width: 100%;
+	z-index: 10;
+}
+#dialogbox{
+	display: none;
+	position: fixed;
+	/*font-weight: bold;*/
+	background: #140056;
+	border-radius:7px;
+	width:auto;
+	/* margin-left:30%;*/
+	z-index: 10;
+	text-align: center;
+	margin: 200px 0;
+}
+#dialogoboxhead, #dialogoboxfoot{
+	background: #140056;
+	color: #fff;
+}
+
+
+
+
+#noButton{float:right;margin-right:20px;}
+#yesButton{float:left;margin-left:20px;}
+#yesButton,#noButton{
+	width:100px;
+	height:30px;
+	border-radius:4px;
+	font-size: 16px;
+	margin-top:20px;
+	margin-bottom:20px;
+	background-color: #fff;
+}
+#yesButton:hover{
+	background-color: greenyellow;
+	color: #140056;
+}
+
+#noButton:hover{
+	background:#ff3333;
+	color: #fff;
+}
+
+#noButtonEdif{float:left;margin-right:20px;}
+#yesButtonEdif{float:right;margin-left:20px;}
+#yesButtonEdif,#noButtonEdif{
+	width:100px;
+	height:30px;
+	border-radius:4px;
+	font-size: 16px;
+	margin-top:20px;
+	margin-bottom:20px;
+}
+#yesButtonEdif:hover{
+	background-color: greenyellow;
+	color: #140056;
+}
+
+#noButtonEdif:hover{
+	background:#ff3333;
+	color: #fff;
+}
+
+#wisButtonPro,#wisButtonEl,#wisButtonCan,#proButtonAc{
+	height:30px;
+	border-radius:4px;
+	margin-top:20px;
+	margin-bottom:20px;	
+}
+
+#recButtonPro,#recButtonEl,#recButtonCan,#recButtonRec{
+	height:30px;
+	border-radius:4px;
+	margin-top:20px;
+	margin-bottom:20px;	
+}
+
+#dialogbox > div{ background:#140056; margin:8px;}
+#dialogbox > div > #dialogboxhead{ background: #140056; font-size:19px; padding:10px; color:#fff;
+font-weight: bold; }
+#dialogbox > div > #dialogboxbody{ background: #FFFFFF; padding:20px;}
+#dialogbox > div > #dialogboxfoot{ background: #3140056; padding:10px; text-align:right;}
+
+
+#wisButtonPro{width:120px;font-size: 12px;}
+#wisButtonEl{width:70px;font-size: 12px;}
+#wisButtonCan{width:70px;font-size: 12px;}
+
+#recButtonRec{width:120px;font-size: 12px;}
+#recButtonPro{width:120px;font-size: 12px;}
+#recButtonEl{width:70px;font-size: 12px;}
+#recButtonCan{width:70px;font-size: 12px;}
+
+	.pagoDos,.refDos{
+	   display:inline-block;
+	   margin-left:8%;
+	   width:84%;
+	   height:100%;
+	}
+	
+	.formularioDos{
+	    background-color:#d9d9d9;
+		border-radius: 5px 5px 5px 5px;
+		margin:auto;
+		height:80px;
+	}
+
+	#pagoDos,#refDos{
+		font-size: 18px;
+		height:90%;
+		margin-top:10px;
+		border-radius: 5px 5px 5px 5px;
+		border-left:2px solid #8c8c8c;
+		border-top:2px solid #8c8c8c;
+	}
+	#pagoDos{ width:100%;}
+    #refDos{width:97%;}
+
+@media(max-width: 480px){
+#recButtonPro{
+    float:left;
+    margin-left:5%;
+}
+#recButtonEl{
+    float:left;
+    width:120px;
+    margin-left:10%;
+    margin-top:0;
+}
+#recButtonCan{
+    float:left;
+    width:120px;
+    margin-left:5%;
+    margin-top:0;
+}
+#recButtonRec{
+	float:left;
+	margin-left:10%;
+}
+table {
+	width: 270px;
+}
+
+
+}

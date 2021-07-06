@@ -1,0 +1,26 @@
+CREATE TABLE `confirmacion_pagos` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `cod_edificio` VARCHAR(20) NOT NULL,
+  `control` INT NOT NULL,
+  `status` TINYINT NOT NULL,
+  `codigo` VARCHAR(14) NOT NULL,
+  `unidad` VARCHAR(5) NOT NULL,
+  `fecha` date NOT NULL,
+  `monto` DOUBLE NOT NULL,
+  `tipo_pago` VARCHAR(11) NOT NULL,
+  `numero_acceso` varchar(20) NOT NULL,
+  `creada` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `cod_edificio` (`codigo`)
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
+
+
+status: 1 CONFIRMADO, 2:negada, 3: reportado;
+NO SE PUEDE CONFIRMAR UN PAGO HASTA QUE EL ULTIMO con status 1 HAYA SIDO REPORTADO,
+ES DECIR NO PUEDE HABER MAS DE UN PAGO CON STATUS 1 AL MOMENTO DE REPORTAR. 
+codigo: el codigo que tenia el pago propietario
+control: el numero de control que tenia el pago propietario;
+fecha: la fecha en la que se hace la aprobacion o rechazo del pago
+
+
+ALTER TABLE confirmacion_pagos ADD COLUMN tipo_pago VARCHAR (11) NOT NULL AFTER monto;

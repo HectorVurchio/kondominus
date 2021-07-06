@@ -1,0 +1,25 @@
+CREATE TABLE `edificios` (
+  `id_ed` int NOT NULL AUTO_INCREMENT,
+  `cod_edificio` varchar(20) NOT NULL,
+  `nombre_edificio` varchar(20) NOT NULL,
+  `direccion` varchar(80) NOT NULL,
+  `id_estado` int NOT NULL,
+  `id_ciudad` int NOT NULL,
+  `telefono` varchar(16) NOT NULL,
+  `correo` varchar(80) NOT NULL,
+  `numero_acceso` VARCHAR(20) NOT NULL,
+  `creada` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id_ed`),
+  KEY `cod_edificio` (`cod_edificio`)
+) ENGINE=InnoDB  DEFAULT CHARSET=UTF8MB4 ;
+
+INSERT INTO `edificios` (`cod_edificio`, `nombre_edificio`, `direccion`, `id_estado`,`id_ciudad`,`telefono`,`correo`) VALUES
+('J-365489527','Res. Cardenal Plaza','Urbanizacion La Trigaleña Avenida 130','7','127','0241-8424541','cardenalplaza@hotmail.com');
+
+
+SELECT edificios.nombre_edificio,propietarios.cod_propietario,propietarios.cod_edificio,propietarios.unidad,propietarios.alicuota FROM edificios RIGHT JOIN propietarios ON edificios.cod_edificio = propietarios.cod_edificio WHERE propietarios.cuenta_propietario ='V-13801637' 
+
+
+
+
+

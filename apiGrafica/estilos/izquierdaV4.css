@@ -1,0 +1,261 @@
+	.izquierda{
+	display:block;
+	border-style: solid;
+    border-width: 0px;
+	margin: auto;
+	background-color:#f8f8ff;
+	width: 300px;
+	padding-bottom:50px;
+	}
+
+	.cuerpo .izquierda .idPagina,.cuerpo .izquierda .idPaginaDos{
+	  margin-top:20px;
+	  margin-bottom:20px;
+	  padding-left:15px;
+	  padding-right:0px;
+	  width:95%;
+	  height:70px;
+	  font-family: 'Oswald', sans-serif;
+	  font-weight: bold;
+	  color:white;
+	  background-color:midnightblue;
+	  text-transform: uppercase;
+	  border-style: solid;
+      border-width: 0px;
+	  border-radius: 10px 10px 10px 10px;
+	}
+	
+	.cuerpo .izquierda .idPagina{
+		font-size: 30px;
+		padding-top: 12px;	
+	}
+
+	.cuerpo .izquierda .idPaginaDos{
+		font-size: 16px;
+	}
+	
+	.cuerpo .izquierda .idPagina .imgIdPagina {
+	   vertical-align:middle;
+	   height: 56px;
+	}
+	
+	.cuerpo .izquierda .idPaginaDos .imgIdPagina{
+        margin:5px 12px;
+        vertical-align:middle;
+	}
+	
+	.cuerpo .izquierda a:link,a:visited{
+	  margin-bottom:20px;
+	  width:100%;
+	  height:30px;
+	  font-family: 'Oswald', sans-serif;
+	  font-size: 20px;
+	  font-weight: bold;
+	  color:#333;
+	  border-style: solid;
+      border-width: 0px;
+	  border-radius: 10px 10px 10px 10px;
+	  text-decoration: none;
+	  padding-top: 5px;
+	  padding-bottom:5px;
+	}
+	
+	.cuerpo .izquierda .botonUno a:hover, a:active{background-color: rgb(31, 78, 140, 0.75);}
+    .cuerpo .izquierda .botonUno a{
+	  background-color: #ffffff;	
+	  padding-left:90px;
+	  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	}
+
+	.cuerpo .izquierda .botonCuatro a:hover, a:active{background-color: #cccccc;}
+    .cuerpo .izquierda .botonCuatro a{
+	  background-color: #ffffff;	
+	  padding-left:43px;
+	}
+	
+	#formOne{display:none;}
+	#formTwo{display:none;}
+	#formThree{display:none;}
+	
+	.cuerpo .izquierda .formulario{
+	background-color: rgb(31, 78, 140, 0.75);
+	border-radius: 10px 10px 10px 10px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	margin-top:30px;
+	}
+	
+	
+	.cuerpo .izquierda .formulario .anteTitulo{
+	display:block;
+	width:100%;
+	height:5px;
+	border-style: solid;
+    border-width: 0px;
+	}
+	
+	.cuerpo .izquierda .formulario .titulo{
+	display:block;
+	width:100%;
+	height:50px;
+	border-style: solid;
+    border-width: 0px;
+	}
+	
+	.cuerpo .izquierda .formulario .titulo p{
+	  font-weight: bold;
+	  color:white;
+	  text-align:center;
+	  font-family: 'Oswald', sans-serif;
+	  text-transform: uppercase;
+	  text-shadow: 2px 2px 6px darkslategrey;
+	  font-size: 20px;
+	}
+	
+	.cuerpo .izquierda .formulario .fila{
+	   display:block;
+	   margin-top:10px;
+	   margin-bottom:10px;
+	   width:100%;
+	   height:36px;	
+	   border-style: solid;
+       border-width: 0px;
+	}
+
+	
+    .cuerpo .izquierda .formulario .fila .rifBefore,.cedBefore{
+	   display:inline-block;
+	   margin-left:8%;
+	   width:20%;
+	   height:100%;
+	}
+	
+	#rifBefore,#cedBefore{
+	width:100%;
+	height:100%;
+	font-size: 18px;
+	border-radius: 5px 5px 5px 5px;
+	border-left:2px solid #8c8c8c;
+    border-top:2px solid #8c8c8c;
+	margin-right:0px;
+	}
+	
+	.cuerpo .izquierda .formulario .fila .rif,.cedula{
+	   display:inline-block;
+	   width:67%;
+	   height:100%;
+	}
+	
+	#rif,#cedula{
+	width:92%;
+	height:90%;
+	font-size: 14px;
+	border-radius: 5px 5px 5px 5px;
+	border-left:2px solid #8c8c8c;
+    border-top:2px solid #8c8c8c;
+	margin-left:0px;
+	}
+	
+	.cuerpo .izquierda .formulario .fila .proveedor,.fecha,.facNum,
+	.concepto,.monto,.gasto,.ingresoUno,.pago,.ref,.nombre,.excento{
+	   display:inline-block;
+	   margin-left:8%;
+	   width:84%;
+	   height:100%;
+	}
+	.iva{
+	   float:right;
+	   margin-right:9%;
+	   height:100%;	
+	   width:25%;
+	}
+	.imponible{
+	   float:left;
+	   margin-left:8%;
+	   height:100%;
+	   width:55%;
+	}
+	
+    .tipoProy,.numCu,.nota{
+	   display:inline-block;
+	   margin-left:8%;
+	   width:84%;
+	   height:100%;
+	}
+
+	#tipoProy,#numCu,#nota{
+		font-size: 18px;
+		height:90%;
+		border-radius: 5px 5px 5px 5px;
+		border-left:2px solid #8c8c8c;
+		border-top:2px solid #8c8c8c;
+	}
+	#numCu{width:20%;}
+	#tipoProy,#nota{width:97%;}
+	
+	
+	#proveedor,#fecha,#facNum,#concepto,#monto,#gasto,#pago,#ref,#nombre,#excento{
+	font-size: 14px;
+    width:97%;
+	height:90%;
+	border-radius: 5px 5px 5px 5px;
+	border-left:2px solid #8c8c8c;
+    border-top:2px solid #8c8c8c;
+	}
+	#iva,#imponible{
+	font-size: 18px;
+	height:90%;
+	border-radius: 5px 5px 5px 5px;
+	border-left:2px solid #8c8c8c;
+    border-top:2px solid #8c8c8c;		
+	}
+	#iva{width:93%;}
+	#imponible{width:95%;}
+	#excento,#imponible,#iva,#monto{text-align:right;}
+	#etiqDos{
+	width:95%;
+	font-size: 16px;
+	padding-left:5px;
+	}
+	
+	#gasto{
+	font-size: 16px;
+	color:#333;
+    width:99%;
+	height:90%;
+	border-radius: 5px 5px 5px 5px;
+	}
+	
+	#ingresoUno{
+    font-size: 20px;
+	font-weight: bold;
+	color:white;
+    width:97%;
+	height:35px;
+	border-radius: 5px 5px 5px 5px;
+	background-color:#E8810C;
+	text-transform: uppercase;
+	border-color: #fff;
+
+	}
+
+	.cuerpo .izquierda .anteBotonDos{
+	  display:block;
+	  width:100%;
+	  height:5px;
+	  border-style: solid;
+      border-width: 0px;
+	}
+	
+	.cuerpo .izquierda .botonDos a:hover, a:active{background-color: rgb(3, 140, 140, 0.7);}
+	.cuerpo .izquierda .botonDos a{
+	  background-color: #1C7AA3;
+	  padding-left:110px;
+	  color: white;
+	}
+		
+	.cuerpo .izquierda .botonTres a:hover, a:active{background-color: #cccccc;}
+	.cuerpo .izquierda .botonTres a{
+	  padding-left:29px;	
+	  background-color: #ffffff;
+	}
+	.cuerpo .izquierda .botonTres a:hover, a:active{background-color: #cccccc;}

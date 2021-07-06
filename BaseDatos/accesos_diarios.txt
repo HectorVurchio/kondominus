@@ -1,0 +1,32 @@
+CREATE TABLE `accesos_diarios` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `cedula` varchar(14) NOT NULL,
+  `cod_propietario` varchar(20) NOT NULL,
+  `numero_acceso` varchar(20) NOT NULL,
+  `dir_IP` varchar(30) NOT NULL,
+  `sist_oper` varchar(30) NOT NULL,
+  `navegador` varchar(30) NOT NULL,
+  `dispositivo` varchar(10) NOT NULL,
+  `fecha_hora` datetime NOT NULL,
+  `estatus` int NOT NULL COMMENT '0=vencida,1=vigente',
+  PRIMARY KEY (id),
+  KEY `cedula` (`cedula`)
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
+
+
+Explicacion de los parametros:
+
+cedula: numero de cedula del usuario
+cod_propietario: combinacion del rifcondominio-unidad
+numero_acceso: numero creado por el sistema que identifica quien realizo la operacion
+dir_IP: direccion IP del usuario
+sist_oper: sistema operativo utilizado por el usuario
+navegador: navegador utilizado por el usuario
+dispositivo: dispositivo utilizado por el usuario 
+fecha_hora: fecha y hora del momemto en el que se inicio la conexion. 
+estatus: 0 es cuando el usuario esta activo, 1 cuando la sesion expira
+
+
+ALTER TABLE accesos_diarios ADD COLUMN estatus int NOT NULL COMMENT '0=vencida,1=vigente' AFTER fecha_hora;
+
+UPDATE accesos_diarios SET estatus = '1' WHERE 1;

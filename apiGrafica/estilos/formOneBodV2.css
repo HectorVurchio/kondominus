@@ -1,0 +1,33 @@
+ body {
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+  background-color: #f3f2f0;
+}
+ .cuerpo {
+     display: flex;
+     flex-wrap: wrap;
+     background-color:#f8f8ff;
+     width: 100%;
+    }
+	.relleno{
+	display:block;
+    width:100%;
+	height:10px;
+	background-color:#f4f4f4;
+	}
+	
+	.resolucion{
+	   display:none;
+	}
+
+
+@media (max-width: 299px) {
+   .cuerpo{
+      display:none;
+   }
+   .resolucion{
+      display:block;
+	  text-align:center;
+	  padding-top:250px;
+   }
+}

@@ -1,0 +1,86 @@
+.aviso{
+	margin: 50px 0;
+} 
+.aviso .subAviso{
+		font-family: 'Oswald', sans-serif;
+		font-size: 14px;
+	    background-color: #140056;
+		text-align:center;
+		border-radius:10px;
+}
+
+.saRaw {
+	color: #fff;
+}
+
+.saRow1 {
+	font-size: 16px;
+	color: darkkhaki;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	font-weight: bold;
+}
+
+.saRow2{
+	font-size: 16px;
+	color: crimson;
+}
+
+.sarColTw{
+	color: #fff;
+	padding-bottom: 10px;
+}
+
+
+.botonAviso{
+    width:264px;
+	height:44px;
+    font-size: 16px;
+	margin-top:20px;
+	margin-bottom:10px;
+	border-radius:10px;
+	background-color: #fff;
+}
+
+.botonAviso:hover{
+	font-size: 18px;
+	font-weight: bold;
+	background-color: greenyellow;
+}
+
+#botAvSI{
+	margin-left:20px;
+	background-color:green;
+}
+#botAvNO{
+	background-color:red;
+}
+
+#botAvNO:hover,#botAvSI:hover{
+	background-color:#424647;
+}
+
+
+/*
+@media (max-width: 900px) {
+	    .aviso{
+		   font-size: 20px;
+		}
+}
+@media (max-width: 650px) {
+	    .aviso{
+		   font-size: 16px;
+		}
+}
+@media (max-width: 480px) {
+	    .aviso{
+		   font-size: 12px;
+		}
+		.botonAlert{width:140px;}
+}		 
+	
+@media (max-width: 299px) {
+   .aviso{display:none;}
+}
+	 
+	

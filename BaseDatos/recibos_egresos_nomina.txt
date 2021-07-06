@@ -1,0 +1,35 @@
+CREATE TABLE `recibos_egresos_nomina` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `cod_edificio` VARCHAR(20) NOT NULL,
+  `status` TINYINT NOT NULL,
+  `control` INT NOT NULL,
+  `codigo` VARCHAR(14) NOT NULL,
+  `tipo_gasto` VARCHAR(15) NOT NULL,
+  `fecha` DATE NOT NULL,
+  `monto` double NOT NULL,
+  `cedula` varchar(12) NOT NULL,
+  `tipo_pago` varchar(15) NOT NULL,
+  `referencia` varchar(80) NOT NULL,
+  `concepto` varchar(80) NOT NULL,
+  `nota` VARCHAR(80) NOT NULL,
+  `numero_acceso` varchar(20) NOT NULL,
+  `creada` DATETIME NOT NULL,
+  `modificada` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `cod_edificio` (`codigo`)
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
+
+
+EXPLICACION DE LOS STATUS:
+status 0: Corresponde a los EGRESOS que deben relacionarse en el proximo RECIBO DE COBRO para ser pagado por los propietarios.
+status 1: Corresponde a los EGRESOS que fueron cobrados en las provisiones del recibo anterior al ultimo y deben solo presentarse a titulo informativo, no para ser cobrados.
+Status 2: Corresponde a los Egresos ya relacionados en el ultimo recibo cuyo status anterior fue 0.
+Status 3: Corresponde a los Egresos ya relacionados en el ultimo recibo cuyo status anterior fue 1.
+
+EXPLICACION DEL CODIGO:
+EGRESOaaaamm    : codigo utilizado en egresos no relacionados en recibos de cobro. (aaaa = 4 digitos del ano, mm = 2 digitos del mes).
+COBROaaaammccc : codigo utilizado en egresos relacionados en recibos de cobro. (ccc = 3 digitos del control del recibo de cobro).
+
+
+
+ALTER TABLE recibos_egresos_nomina ADD COLUMN tipo_gasto VARCHAR(15) NOT NULL AFTER nota;

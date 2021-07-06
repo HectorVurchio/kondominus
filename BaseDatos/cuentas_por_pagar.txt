@@ -1,0 +1,34 @@
+CREATE TABLE `cuentas_por_pagar` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `cod_edificio` VARCHAR(20) NOT NULL,
+  `status` TINYINT NOT NULL,
+  `control` INT NOT NULL,
+  `codigo` VARCHAR(14) NOT NULL,
+  `tipo_gasto` VARCHAR(15) NOT NULL,
+  `fecha` DATE NOT NULL,
+  `monto` DOUBLE NOT NULL,
+  `rif` VARCHAR(12) NOT NULL,
+  `concepto` VARCHAR(80) NOT NULL,
+  `vencimiento` INT NOT NULL,
+  `nota` VARCHAR(80) NOT NULL,
+  `numero_acceso` VARCHAR(20) NOT NULL,
+  `creada` DATETIME NOT NULL,
+  `modificada` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `cod_edificio` (`codigo`)
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
+
+EXPLICACION DE LOS STATUS:
+status 0: Corresponde a los EGRESOS (CTA POR PAGAR) que deben relacionarse en el proximo RECIBO DE COBRO para ser pagado por los propietarios.
+status 1: Corresponde a los EGRESOS (CTA POR PAGAR) que fueron cobrados EN el recibo ultimo recibo y deben ser pagados por el ADMINISTRADOR.
+Status 2: Corresponde a los Egresos (CTA POR PAGAR) que ya fueron pagadas por el administrador.
+Status 3: Corresponde a los Egresos (CTA POR PAGAR) que fue demostrado en recibo de cobro que se pagaron.
+
+EXPLICACION DEL CODIGO:
+EGRESOaaaamm    : codigo utilizado en egresos no relacionados en recibos de cobro. (aaaa = 4 digitos del ano, mm = 2 digitos del mes).
+COBROaaaammccc : codigo utilizado en egresos relacionados en recibos de cobro. (ccc = 3 digitos del control del recibo de cobro).
+
+tipo_gasto: por ejemplo 0.1.5-CPPAP que corresponde al cod_cta de la tabla cuentas_contabilidad;
+
+ALTER TABLE cuentas_por_pagar ADD COLUMN tipo_gasto varchar(15) NOT NULL AFTER nota;
+

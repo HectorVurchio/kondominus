@@ -1,0 +1,305 @@
+*{
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+  }
+  section{
+    box-sizing: border-box;
+    /* height: 100vh; */
+    width: 100vw;
+    padding-top: 12vh;
+    display: flex;
+  }
+  nav{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  nav a{
+    text-decoration: none;
+    color: #333333;
+  }
+  
+  #b0{
+    background-color: #003656;
+    color:#ffffff;
+    letter-spacing: 1.5px;
+  }
+
+    
+/* Botones de los lados */
+.botonIzq, .boton{
+    height: 90px;
+    width: 300px;
+    margin-bottom:20px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: #f3f2f0;
+    box-shadow: -10px -10px 15px rgba(255,255,255,0.9), 10px 10px 15px rgba(70,70,70,0.12);
+    border: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.boton:hover{
+    background-color: greenyellow;
+}
+.showup{
+    flex-grow: 3;
+    /* padding-top: 3vh; */
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.showup > div{
+    width: 320px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 20px;
+}
+.showup.dos{
+    padding-top: 3vh;
+    justify-content: normal;
+    flex-direction: column;
+    align-items: center;
+}
+.generales, .admon{
+    height: auto;
+}
+
+.icon {
+    height: 2.0em;
+    margin: 0 10px 0 -20px;
+}
+
+/* Modulo de Resumen */
+.titulo{
+    box-sizing: border-box;
+    background-color: #003656;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 1.4px;
+    padding: 5px;
+    margin-bottom: 20px;
+    /* width: 85%; */
+    display: flex;
+    justify-content: center;
+}
+.titulo.dos{
+    background-color: indianred;
+}
+.titulo.tres{
+    padding:4px;
+    width: 95%;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.resumenDatos{
+    box-sizing: border-box;
+    margin: 20px 0 0 0;
+    color: #6b6b6b;
+    /* width: 85%; */
+    /* flex-grow: 1; */
+}
+.modulo{
+    display: flex;
+}
+form{
+    display: grid; 
+    margin-top: 5px;
+}
+input{
+    font-size: 1.1em;
+}
+input:focus{
+    outline: none;
+	/* border-color:#39949c; */
+}
+.rif,.direccion{ 
+    cursor: no-drop;
+    background-color: #eee;
+    opacity: 1;
+}
+.guardar{
+    background: #140056;
+    /* width: 400px; */
+    height: 35px;
+    color: #ffffff;
+    border-radius: 6px;
+    border: 0px;
+    margin-top: 20px;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 4px;
+    font-weight: normal;
+    font-size: 16px;
+}
+.boton.guardar:hover,.guardar:hover{
+    background-color: greenyellow;
+    color: #140056;
+    text-decoration: none;
+}
+.inferior{
+    display: flex;
+    justify-content: center;
+    /* flex: 2; */
+}
+table{
+    width: 90%;
+    border-collapse: collapse;
+}
+th{
+    background-color: #f3f2f0;
+}
+td, th{
+    text-align: center;
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+.apellido,.nombre,.correo{
+    padding-left: 4px;
+    text-align: left;
+}
+.datosInmbueble{
+    display: flex;
+    flex-direction: column;
+}
+h1{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+#i03{
+    width: 35px;
+}
+#i04{
+    width: 24px;
+}
+label{
+    display:flex;
+    align-items: center;
+    color: #003656;
+
+}
+input{
+    margin-bottom: 10px;
+    color: #333333;
+    font-weight: lighter;
+    font-size: 0.9em;
+}
+.inquilinos{
+    display: -webkit-inline-box;
+}
+.guardar a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.ventana{
+    flex: 3;
+    padding-top: 3vh;
+}
+.form > div >input{
+    margin:0px
+}
+fieldset{
+    width: 90%;
+    margin-bottom: 20px;
+}
+#inmueble{
+    width: 70px;
+}
+#propietario{
+    width: 150px;
+}
+#cargo{
+    width: 200px;
+}
+#agregar,#aceptar,#modificar {
+    padding-left: 5px;
+    text-decoration: none;
+}
+.fondosIni label img {
+    margin-right: 0.2em;
+}
+.fondosIni,.multas {
+    display: flex;
+    flex-direction: column;
+}
+#dineroBan,#dineroEfec,#cxc,#fondoR{
+    text-align: right;
+}
+@media screen and (max-width:419px){
+    .showup > div {
+        border: none;
+    }
+}
+
+@media screen and (max-width:420px){
+    section{
+        flex-direction: column;
+        align-items: stretch;
+        padding-top: 0vh;
+    }
+    nav{
+        display: flex;
+        padding: 0;
+        width: auto;
+    }
+    .botonIzq, .boton{
+        width: auto;
+        margin: 10px 5px 10px 5px;
+    }
+    .showup #summary{
+        display: flex;
+        padding: 0;
+        width: auto;
+    }
+    .titulo{
+        width: auto;
+    }
+    .titulo2{
+        padding: 5px;
+    }
+    .resumenAC{
+        display: inline;
+        margin-bottom: 30px;
+    }
+    form{
+        margin:auto;
+        width: auto;
+        display: grid;
+    }
+    .formularioAC{
+        width: auto;
+        margin: 5px;
+    }
+    .formAC,.texto,.botonG{
+        width: auto;
+    }
+    iframe{
+        width: 100%;
+    }
+    fieldset{
+        width: 100%;
+    }
+    table{
+        font-size: 0.72em;
+    }
+  }
+  @media screen and (max-width:760px){
+    .resumen{
+        font-size: 0.90rem;
+    }
+    section{
+        padding-top: 0vh;
+    }
+  }

@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+  }
+  section{
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+    padding-top: 12vh;
+    display: flex;
+  }
+  nav{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  nav a{
+    text-decoration: none;
+    color: #333333;
+  }
+  
+  #b0{
+    background-color: #140056;
+    color:#ffffff;
+    letter-spacing: 1.5px;
+  }
+    
+  /* Botones de los lados */
+  .botonIzq, .boton, .b5 {
+    height: 90px;
+    width: 300px;
+    margin-bottom:20px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: #f3f2f0;
+    box-shadow: -10px -10px 15px rgba(255,255,255,0.9), 10px 10px 15px rgba(70,70,70,0.12);
+    border: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .boton:hover{
+    background-color: greenyellow;
+  }
+  .showup{
+    flex-grow: 3;
+    padding-top: 3vh;
+  }
+  /* Modulo de Resumen */
+  .titulo{
+    box-sizing: border-box;
+    background-color: #140056;
+    border-radius: 10px;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 20px;
+    width: 85%;
+  }
+  .resumen{
+      padding-left: 20px;
+      font-size: 20px;
+      margin-top: 20px;
+      color: #6b6b6b;
+      font-weight: lighter;
+      line-height: 40px;
+  }
+  /* FORMULARIO DE AGREGAR FACTURAS */
+  .formFacturas{
+    display: table;
+    box-sizing: border-box;
+    width: 275px;
+    margin: 20px auto;
+  }
+  
+  h2{
+    width: 500px;
+    background-color: #140056;
+    border-radius: 10px;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 20px;
+    margin: auto;
+  }
+  
+  #rifLetra,#rif,#proveedor,#fecha,#factura,#concepto,#excento,#iva,#baseImp,#total,#tipoGasto,#formaPago,#referencia,#ingresar{
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    margin: 5px;
+  }
+  #rifLetra {
+    width: 20%;
+  }
+  #proveedor,#concepto {
+    width: 92%;
+  }
+  
+  #excento,#baseImp,#total,#referencia {
+    width: 92%;
+    text-align: right;
+  }
+  #rif{
+    width: 68%;
+  }
+  #fecha{
+    float: right;
+    margin-right: 2.4%;
+  }
+  #factura,#iva{
+    width: 64.5%;
+    float: right;
+    margin-right: 2.4%;
+    text-align: right;
+  } 
+  
+  #tipoGasto,#formaPago{
+    width: 96%;
+    float: right;
+    margin-right: 2.4%;
+  }
+  
+  #ingresar{
+    background: #140056;
+    color: #ffffff;
+    border-radius: 6px;
+    border: 0px;
+    width: 96%;
+    height: 35px;
+    cursor: pointer;
+  }
+  #ingresar:hover{
+    background: greenyellow;
+    color: #140056;
+    font-size: 18px;
+    font-weight: bolder;
+  }
+  
+  @media screen and (max-width:420px){
+    section{
+        flex-direction: column;
+        align-items: stretch;
+        padding-top: 0vh;
+    }
+    nav{
+        display: flex;
+        padding: 0;
+        width: auto;
+    }
+    .botonIzq, .boton{
+        width: auto;
+        margin: 10px 5px 10px 5px;
+    }
+    .showup #summary{
+        display: flex;
+        padding: 0;
+        width: auto;
+  
+    }
+    .titulo{
+        width: auto;
+    }
+    .resumen{
+        padding-left: 0px;
+        align-items: stretch;
+        margin: 10px 5px 10px 5px; 
+        font-size: 0.94rem;
+    }
+    .formFacturas{
+        box-sizing: border-box;
+        width: 95%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    h2{
+        width: 94%;
+    }
+  }
+  @media screen and (max-width:760px){
+    .resumen{
+        font-size: 0.90rem;
+    }
+    section{
+        padding-top: 0vh;
+    }
+  }

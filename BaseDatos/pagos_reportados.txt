@@ -1,0 +1,27 @@
+CREATE TABLE `pagos_reportados` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `cod_edificio` VARCHAR(20) NOT NULL,
+  `control` INT NOT NULL,
+  `codigo` VARCHAR(14) NOT NULL,
+  `unidad` VARCHAR(5) NOT NULL,
+  `fecha` date NOT NULL,
+  `cod_rec_cob` VARCHAR(14) NOT NULL,
+  `cod_con_pag` VARCHAR(14) NOT NULL,
+  `demora` INT NOT NULL,
+  `multa` DOUBLE NOT NULL,
+  `inter` DOUBLE NOT NULL,
+  `resta` DOUBLE NOT NULL,
+  `pagado` DOUBLE NOT NULL,
+  `numero_acceso` varchar(20) NOT NULL,
+  `creada` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `cod_edificio` (`codigo`)
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
+
+
+cod_rec_cob: CODIGO DEL RECIBO DE COBRO O de la cta por cobrar que origino este pago
+cod_con_pag: codigo que viene de la tabla confirmacion de pagos
+demora: numero de dias transcurridos desde el vencimiento del pago
+multa: multa ocasionada por el retraso en el pago
+pagado: cantidad de dinero total pagada o abonada a esta cuenta
+resta: cantidad de dinero que falta por pagar a esta cuenta

@@ -1,0 +1,32 @@
+CREATE TABLE `provisiones` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `cod_edificio` VARCHAR(20) NOT NULL,
+  `status` TINYINT NOT NULL,
+  `control` INT NOT NULL,
+  `codigo` VARCHAR(14) NOT NULL,
+  `tipo_gasto` varchar(15) NOT NULL,
+  `fecha` date NOT NULL,
+  `monto` DOUBLE NOT NULL,
+  `usado` DOUBLE NOT NULL,
+  `concepto` varchar(80) NOT NULL,
+  `numero_acceso` varchar(20) NOT NULL,
+  `creada` DATETIME NOT NULL,
+  `modificada` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `cod_edificio` (`codigo`)
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
+
+
+EXPLICACION DE LOS STATUS:
+status 0: Corresponde a las PROVISIONES que fueron aprobadas en el ultimo recibo de cobro y no han sido utilizadas. Se relaciona en el proximo recibo de cobro para devolver el dinero que no se utilizo sea porque no se ejecuto o porque sobro.
+status 1: Corresponde a las Provisiones que ya fueron ejecutadas y gastado su dinero en su totalidad. se relacionaran en el proximo periodo para informar.
+status 2: Corresponde a las provisiones presentadas cuyo status anterior fue 0 y se devolvio dinero;
+status 3: Corresponde a las provisiones presentadas cuyo estatus anterior fue 0 y no se devolvio dinero porque no habia.
+status 4: Corresponde a las provisiones presentadas cuyo status anterior fue 1;
+
+EXPLICACION DEL CODIGO:
+PROVIaaaammccc : codigo utilizado en PROVISIONES relacionadas en recibos de cobro aun vigentes (aaaa = 4 digitos del ano, mm = 2 digitos del mes, ccc = 3 digitos del control recibos_cobro).
+
+
+
+

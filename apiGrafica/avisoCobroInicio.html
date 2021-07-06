@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviso de Cobro - Inicio</title>
+   	<link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="/apiGrafica/estilos/cabezaIndex.css">
+    <link rel="stylesheet" href="/apiGrafica/estilos/avisoCobro.css">
+    <!--<link rel="stylesheet" href="/apiGrafica/estilos/pieIndex.css">-->
+    <link rel="stylesheet" href="/apiGrafica/estilos/profile.css">
+	<link rel="stylesheet" href="/apiGrafica/estilos/avisoDos.css">
+	  <link rel="stylesheet" href="/apiGrafica/estilos/avisoCuatro.css">
+    <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<script src="/apiGrafica/js/nuevos/cobroEfectivo.js?1" type="module"></script>
+</head>
+<body>  
+    <header class="header">
+      <a href="javascript:void(0);" class="logo" id='logo1'><p id="titulo"></p></a>
+      <input class="menu-btn" type="checkbox" id="menu-btn"/>
+      <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+      <ul class="menu">
+      </ul>
+		<div class="dropdown">
+		</div>	  
+		<div class="opciones">
+		</div>   
+   </header>
+    
+    <section>
+      <nav>
+        <a class='botonIzq' id='b0' href='javascript:void(0)'><img src='/apiGrafica/imagenes/i-aviso.png' class='icon i00'>AVISO DE COBRO</a>
+        <a class='boton b1' id='boton b1' href='javascript:void(0);'><img src='/apiGrafica/imagenes/add_circle.svg' class='icon i01'>GENERAR NUEVO<br>Aviso de Cobro</a>
+        <a class='boton b2' id='boton b2' href='#'><img src='/apiGrafica/imagenes/modify-24px.svg' class='icon i02'>MODIFICAR<br>Aviso de Cobro</a>
+      </nav>
+      
+      <div class='showup' id='summary'>
+        <div class='titulo'>HISTÓRICO - AVISOS DE COBRO</div>
+        <div class='titulo3'>ÚLTIMOS 3 MESES</div>
+        <div class='resumenAC'></div>
+        <div class='titulo2'>REALIZAR BÚSQUEDA AVANZADA</div>
+        <div class='resumenAC 2'>
+            <form class='busMes'>
+              <input id='nombre' type='month' name='mes' step='1' min='2020-19' max='2030-20' value=''>
+              <input id='buscar' type='submit' name='enviar' value='Buscar'>
+            </form>
+        </div>
+      </div>
+    </section>
+    <footer>
+    </footer>
+    </body>
+</html>

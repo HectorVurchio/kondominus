@@ -1,0 +1,54 @@
+CREATE TABLE `proveedores` (
+  `id_proveedor` int NOT NULL AUTO_INCREMENT,
+  `cod_edificio` VARCHAR(20) NOT NULL,
+  `rif` varchar(12) NOT NULL,
+  `nombre` varchar(80) NOT NULL,
+  `direccion` varchar(80) NOT NULL,
+  `id_estado` int NOT NULL,
+  `id_ciudad` int NOT NULL,
+  `telefono` varchar(16) NOT NULL,
+  `actividad` varchar(80) NOT NULL,
+  `contacto` varchar(80) NOT NULL,
+  `correo` varchar(80) NOT NULL,
+  `creada` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id_proveedor`),
+  KEY `rif` (`rif`)
+) ENGINE=InnoDB  DEFAULT CHARSET=UTF8MB4 ;
+
+/* en la base de datos insertar rif proveedor J-000000000 con los datos del edificio para cuentas por cobrar apertura Proveedor = Proveedores Anteriores*/
+
+
+ALTER TABLE proveedores ADD COLUMN creada timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP;
+
+ALTER TABLE clientes ADD COLUMN cod_edificio VARCHAR(20) NOT NULL AFTER id_cliente;
+
+ALTER TABLE proveedores ADD COLUMN cod_edificio VARCHAR(20) NOT NULL AFTER id_proveedor;
+
+UPDATE proveedores SET cod_edificio = 'J-365489527' WHERE 1;
+
+INSERT INTO `proveedores` (`id_proveedor`,`rif`, `nombre`,`direccion`,`id_estado`,`id_ciudad`,`telefono`,`actividad`,`contacto`,`correo`) VALUES
+('23','J-303298653','Ferreteria La Estrella C.A.','calle 123 urb los guayos ','7','127','2418548896','Ficticio ','Pedro Perez','pedroperez@hotmail.com'),
+('24','J-965321897','Suministros La Coruna S.A.','calle 113 urb los Arales ','7','127','2418254469','Ficticio ','Pedro Perez','pedroperez@hotmail.com'),
+('25','J-351236589','Mat Electricos CJ C.A.','calle 24 urb el milagro','7','127','2418573220','Ficticio ','Pedro Perez','pedroperez@hotmail.com'),
+('26','J-963582216','Productos La Tortuga C.A.','calle 45 urb los Mangos','7','127','2418736542','Ficticio ','Pedro Perez','pedroperez@hotmail.com'),
+('27','J-404236891','Ascensores JM C.A.','calle 26 urb la Victoria','7','127','2418548896','Ficticio','Pedro Perez','pedroperez@hotmail.com'),
+('28','V-10258321','Petra Sofia Mejias Torres','calle 12 urb el mango','7','127','2415236698','Ficticio','Pedro Perez','pedroperez@hotmail.com'),
+('29','J-258963908','Vigilancia El Tigre C.A.','vereda 4 Barrio Nino Jesus','7','127','2418579632','Ficticio','Pedro Perez','pedroperez@hotmail.com'),
+('30','J-236548924','Bombas IngBoost C.A.','calle 51 urb Las Flores','7','127','2418554213','Ficticio','Pedro Perez','pedroperez@hotmail.com'),
+('31','J-751258963','Inst y Serv JMB C.A.','calle 26 urb casa Vieja ','7','127','2412256923','Ficticio','Pedro Perez','pedroperez@hotmail.com'),
+('32','J-561896328','Comercial La Entrada','Av 24 urb Palma Sola','7','127','2418756632','Ficticio','Pedro Perez','pedroperez@hotmail.com'),
+('33','J-425963527','Libreria La Muneca','Av 36 urb El Moriche','7','127','2418243698','Ficticio','Pedro Perez','pedroperez@hotmail.com'),
+('34','J-598123523','Pinturas La Colina C.A.','calle 123 urb los guayos','7','127','2418548896','Ficticio','Pedro Perez','pedroperez@hotmail.com'),
+('35','J-872663252','Suministros La Pega S.A.','calle 123 urb los Arales ','7','127','2418254469','Ficticio','Pedro Perez','pedroperez@hotmail.com'),
+('36','J-158963741','Portones HLK C.A.','calle 26 urb la Piedra','7','127','2418548885','Ficticio','Pedro Perez','pedroperez@hotmail.com'),
+('37','J-943561859','Creaciones SIRIN C.A.','calle perez Arreaza  los Pinos','7','127','2417456632','Ficticio','Pedro Perez','pedroperez@hotmail.com'),
+('38','J-417561232','Purificadora Cristal C.A.','Av Ambrosio Mendez  las Palmeras','7','127','2413125896','Ficticio','Pedro Perez','pedroperez@hotmail.com'),
+('39','V-11446321','Arnoldo Jose Uzcategui Gomez','calle 23 urb Sabana Grande ','7','127','2413698547','Ficticio','Pedro Perez','pedroperez@hotmail.com'),
+('40','J-158915294','Electronic Arts C.A.','Av German 51 c/c Calle 98  ','7','127','2412589632','Ficticio','Pedro Perez','pedroperez@hotmail.com'),
+('41','J-158915294','Control Plagas LPT C.A.','Av  36 c/c Calle 65 ','7','127','2412584125','Ficticio','Pedro Perez','pedroperez@hotmail.com'),
+('42','J-158047027','TechFire C.A.','Av  36 Urb La Cienaga ','7','127','2412746532','Ficticio','Pedro Perez','pedroperez@hotmail.com'),
+('43','J-236521479','Clinica San Geronimo C.A.','Av  Lozano c/c Calle 65 ','7','127','2417596482','Ficticio','Pedro Perez','pedroperez@hotmail.com'),
+('44','J-658283971','Farmacia Sta Sofia C.A.','Av  36 Urb La Cienaga ','7','127','2412745598','Ficticio','Pedro Perez','pedroperez@hotmail.com');
+
+
+

@@ -1,0 +1,14 @@
+CREATE TABLE `junta_de_condominio` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `cod_edificio` VARCHAR(20) NOT NULL,
+  `cargo` VARCHAR(30) NOT NULL,
+  `unidad` VARCHAR(10) NOT NULL,
+  `representante` VARCHAR(14) NOT NULL,
+  `periodo` INT NOT NULL,
+  `duracion` TINYINT NOT NULL,
+  `inicio` DATE NOT NULL,
+  `numero_acceso` VARCHAR(20) NOT NULL,
+  `creada` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `cod_edificio` (`periodo`)
+) ENGINE=InnoDB  DEFAULT CHARSET=UTF8MB4;

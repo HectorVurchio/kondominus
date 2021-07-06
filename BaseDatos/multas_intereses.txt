@@ -1,0 +1,12 @@
+CREATE TABLE `multas_intereses` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `cod_edificio` VARCHAR(20) NOT NULL,
+  `fecha` DATE NOT NULL,
+  `num` INT NOT NULL,
+  `multa` DOUBLE NOT NULL,
+  `interes` DOUBLE NOT NULL,
+  `numero_acceso` VARCHAR(20) NOT NULL,
+  `creada` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `cod_edificio` (`num`)
+) ENGINE=InnoDB  DEFAULT CHARSET=UTF8MB4;

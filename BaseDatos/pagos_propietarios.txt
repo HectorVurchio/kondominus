@@ -1,0 +1,45 @@
+CREATE TABLE `pagos_propietarios` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `cod_edificio` VARCHAR(20) NOT NULL,
+  `status` TINYINT NOT NULL,
+  `control` INT NOT NULL,
+  `codigo` VARCHAR(14) NOT NULL,
+  `tipo_gasto` varchar(12) NOT NULL,
+  `unidad` VARCHAR(5) NOT NULL,
+  `fecha` date NOT NULL,
+  `monto` DOUBLE NOT NULL,
+  `tipo_pago` varchar(11) NOT NULL,
+  `referencia` varchar(80) NOT NULL,
+  `numero_acceso` varchar(20) NOT NULL,
+  `creada` DATETIME NOT NULL,
+  `modificada` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `cod_edificio` (`codigo`)
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
+
+
+TABLA DEL DINERO QUE ABONAN DIRECTAMENTE LOS PROPIETARIOS.
+Explicacion de los parametros:
+cod_edificio: regularmente es el rif del condominio
+status: 0 cuando el pago no ha sido verificado por el administrador y 1 cuando ya lo fue, 2 cuando fue rechazado por el administrador
+control: generedo por controles_pagos_prop
+codigo: PROPaaaamm____ los ultimos cuatro digitos se reservan para la unidad del inmueble
+tipo gasto: por ejemplo 0.3.1-DBABO que es el codigo_cta de cuentas_contabilidad
+unidad: unidad del edificio en cuestion
+tipo_pago: dineroBan o dineroEfec
+referencia: se refiere a la entidad bancaria y el numero de referencia al hacerce el pago por ejemplo 
+numero_acceso: numero creado por el sistema que identifica quien realizo la operacion
+creada: fecha y hora en las cuales se hicieron las anotaciones
+
+
+ALTER TABLE pagos_propietarios ADD COLUMN control INT NOT NULL AFTER status; 
+
+
+
+
+
+
+
+
+
+

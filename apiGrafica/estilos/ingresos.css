@@ -1,0 +1,582 @@
+*{
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+  }
+  section{
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+    padding-top: 12vh;
+    display: flex;
+  }
+  nav{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  nav a{
+    text-decoration: none;
+    color: #333333;
+  }
+  
+  NAV div:first-child{
+    background-color: #140056;
+    color:#ffffff;
+    letter-spacing: 1.5px;
+  }
+  .b8 {
+    text-align: center;
+  }
+    
+/* Botones de los lados */
+.botonIzq, .boton, .b5 {
+    height: 90px;
+    width: 300px;
+    margin-bottom:20px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: #f3f2f0;
+    box-shadow: -10px -10px 15px rgba(255,255,255,0.9), 10px 10px 15px rgba(70,70,70,0.12);
+    border: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.boton:hover{
+    background-color: greenyellow;
+  }
+  .showup{
+    flex-grow: 3;
+    padding-top: 3vh;
+  }
+
+.icon {
+    height: 2.0em;
+    margin: 0 10px 0 -20px;
+}
+      
+/* .icon path,.icon polygon,.icon rect {
+    fill: #4691f6;
+} */
+      
+/* .icon circle {
+    stroke: #4691f6;
+    stroke-width: 1;
+} */
+/* Modulo de Resumen */
+.titulo{
+    box-sizing: border-box;
+    background-color: #140056;
+    border-radius: 10px;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 20px;
+    width: 85%;
+}
+
+.titulo2,.titulo3{
+    margin-left:5px;
+    font-size: 18px;
+}
+
+.resumenIng{
+    font-size: 20px;
+    text-align: center;
+    margin: 20px 0;
+    color: #6b6b6b;
+    font-weight: lighter;
+    line-height: 40px;
+    width: 85%;
+    display: flex;
+    flex-wrap: wrap;    
+    justify-content: space-around;
+}
+.subTitulo{
+ font-size: 12px;
+ margin-top: -22px;   
+}
+.totRec,.recaudado,.porRec,.totalxRec{
+    border:0.5px solid #ccc;
+    border-radius: 4px;
+    margin: 0 4px;
+    padding: 0 8px;
+    font-size: 14px;
+    flex-grow: 1;
+    background:aliceblue;
+}
+.tRecCE,.recaudadoCE,.porRecCE{
+    border:0.5px solid #ccc;
+    border-radius: 4px;
+    margin: 0 4px;
+    padding: 0 8px;
+    font-size: 14px;
+    flex-grow: 1;
+    background: ivory;
+}
+.totRecBG,.recaudadoBG,.porRecBG,.porcMorosidad{
+    border:0.5px solid #ccc;
+    border-radius: 4px;
+    margin: 0 4px;
+    padding: 0 8px;
+    font-size: 14px;
+    flex-grow: 1;
+    background:khaki;
+}
+.monto {
+    font-size: 20px;
+    text-align: center;
+}
+
+form{
+    width: 85%;
+    display: flex;
+    background: #f3f2f0;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.formPago{
+    margin:auto;
+}
+.formPago > select:first-child{
+    width: 90px;
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+.formPago > input {
+    width: 230px;
+    margin: 5px 0;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+.formPago > button{
+    width: 230px;
+    border: 0px;
+    padding: 10px;
+    border-radius: 4px;
+    background: #140056;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+.formPago > button:hover{
+    background-color: greenyellow;
+    color: #140056;
+    font-size: 18px;
+    font-weight: bold;
+  }
+.formPago #deuda,.formPago #cancelar{
+    text-align: right;
+}
+
+#buscar{
+    float: right;
+    background-image: url('/apiGrafica/imagenes/buscar.svg');
+    background-repeat: no-repeat;
+    background-position: 4px center;
+    height: 43px;
+    border: none;
+    cursor: pointer;
+}
+
+/* formulario de recepcion de dinero*/
+.formPago2{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  margin:auto;
+  width:360px;
+  background-color:white;
+  padding-bottom:30px;
+}
+
+.formPago2 > select:first-child{
+    width: 90px;
+    margin: 11px;
+    font-size: 18px;
+}
+
+.formPago2 > input:nth-child(2),
+.formPago2 > input:nth-child(6),
+.formPago2 > select:nth-child(5) {
+    width:90%;
+    margin: 10px;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+.formPago2 > input:nth-child(4){
+    width:40%;
+    margin: 10px;
+    font-size: 18px;
+    box-sizing: border-box;  
+}
+
+.formPago2 > input:nth-child(6){
+  margin-bottom:40px;
+}
+
+.formPago2 > input:nth-child(3) {
+    width:40%;
+    margin: 10px;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+
+.formPago2 > button{
+    width: 230px;
+    border: 0px;
+    padding: 10px;
+    border-radius: 4px;
+    background: #140056;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin: auto;
+}
+.formPago2 > button:hover{
+    background-color: greenyellow;
+    color: #140056;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+/* dialogo de confirmacion ingreso de dinero*/
+.contDos{
+  width:460px;
+  margin:auto;
+  font-size: 20px;
+  box-shadow: -10px -10px 15px rgba(255,255,255,0.9), 10px 30px 15px rgba(80,70,70,0.12);
+  padding:40px;
+  background-color:#fefefe;
+  color:#140056;
+  border-radius: 10px;
+  border-style:solid;
+  border-width:1px;
+  border-color:#14005691f6;
+}
+
+.subContDos{
+  width:90%;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+}
+
+.subContDos > div{
+  width:unset;
+  display:flex;
+}
+
+.subContDos > div:last-child{
+  display:flex;
+  justify-content:center;
+}
+
+.subContDos > div:last-child > div{
+  margin:auto;
+}
+
+.subContDos > div:last-child > div button{
+  color:#fefefe;
+  font-size: 18px;
+}
+
+.subContDos > div:last-child > div:first-child button{
+  background-color:#d42929;
+}
+
+.subContDos > div:last-child > div:last-child button{
+ background-color:#2e942e;
+}
+
+
+.subContDos > div:last-child > div button:hover{
+  	background-color:greenyellow;
+  	color:#140056;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+
+/* pagos por confirmar*/
+.confcont{
+  width:85%;
+}
+
+.confcont .table{
+   width:500px;
+   margin:auto;
+}
+
+.confcont .table .rowtit,
+.confcont .table .rowbod{
+  display:flex;
+  margin-top:10px;
+}
+
+.confcont .table .rowbod img{
+  width:18px;
+  cursor: pointer;
+}
+
+
+.confcont .table .rowtit > div,
+.confcont .table .rowbod > div{
+  width:20%;
+  margin:auto;
+  text-align:center;
+}
+
+.confcont .table .rowinfo{
+  width:80%;
+  margin:auto;
+  background-color:#f3f2f0;
+}
+
+.confcont .table .rowinfo > p:first-child{
+  margin-top:20px;
+  padding-top:10px;
+}
+
+.confcont .table .rowinfo > p{
+  font-size:14px;
+  margin-left:20px;
+ 
+}
+
+.confcont .table .rowinfo > div{
+    margin-left:70px;
+}
+
+.confcont .table .rowinfo > div:last-child{
+    margin:unset;
+    display:flex;
+    justify-content:center;
+    padding-top:20px;
+    padding-bottom:24px;  
+}
+
+.confcont .table .rowinfo > div:last-child > button{
+  margin:auto;
+  height:36px;
+  width:100px;
+  font-size:18px;
+  border-radius: 6px;
+  color:white;
+}
+
+.confcont .table .rowinfo > div:last-child > button:first-child{
+  background-color:#d42929;
+}
+
+.confcont .table .rowinfo > div:last-child > button:last-child{
+  background-color:#2e942e;
+}
+
+.confcont .table .rowinfo > div:last-child > button:hover{
+   	background-color:greenyellow;
+  	color:#140056;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+/* dialogo de aceptacion o rechazo*/
+
+.rowinfo .cont3{
+  width:100%;
+  box-shadow: -10px -10px 15px rgba(255,255,255,0.9), 10px 30px 15px rgba(80,70,70,0.12);
+  background-color:#fefefe;
+  color:#140056;
+  border-radius: 6px;
+  border-style:solid;
+  border-width:1px;
+  border-color:#14005691f6;
+}
+
+.rowinfo .cont3 .subCont3{
+  width:90%;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+
+}
+.rowinfo .subCont3 > div:last-child{
+  display:flex;
+  justify-content:center;
+}
+
+.rowinfo .subCont3 > div:last-child > div{
+  margin:auto;
+}
+.rowinfo .subCont3 > div{
+  width:unset;
+  display:flex;
+}
+
+.rowinfo .subCont3 > div:last-child > div button{
+  color:#fefefe;
+  font-size: 18px;
+}
+
+.rowinfo .subCont3 > div:last-child > div:first-child button{
+  background-color:#d42929;
+}
+
+.rowinfo .subCont3 > div:last-child > div:last-child button{
+ background-color:#2e942e;
+}
+
+.rowinfo .cont3 .subCont3 .saRowDos form {
+  padding:unset;
+  justify-content:center;
+}
+
+.rowinfo .cont3 .subCont3 .saRowDos form input{
+  width:60%;
+   border-radius: 6px;
+}
+
+#verif-Ac-1-NO-0,#verif-Ac-1-SI-0{
+  background-color:#140056;
+}
+
+/* Dialogo de los reportes de pagos */
+.reporteDos{
+  width:85%;
+  margin:auto;
+  padding-top:30px;
+  padding-bottom:40px;
+  font-size: 16px;
+  box-shadow: -10px -10px 15px rgba(255,255,255,0.9), 10px 30px 15px rgba(80,70,70,0.12);
+  background-color:#fefefe;
+  color:#140056;
+  border-radius: 10px;
+  border-style:solid;
+  border-width:1px;
+  border-color:#14005691f6;
+}
+
+.saRowDos:first-child {
+  display:flex;
+  margin:auto;
+}
+
+.saRowDos:not(.saRowDos:first-child){
+  display:flex;
+  width:100%;
+}
+
+.saRowDos > div{
+  text-align:center;
+}
+
+.butRowOne{
+  display:flex;
+}
+.butRowOne > div{
+  margin:auto;
+}
+
+.reporteDos #avCol-0:not(.saRowDos:first-child #avCol-0){
+  width:10%;
+}
+.reporteDos #avCol-1{
+   width:15%;
+}
+.reporteDos #avCol-2{
+   width:15%;
+}
+.reporteDos #avCol-3{
+   width:10%;
+}
+.reporteDos #avCol-4{
+   width:10%;
+}
+.reporteDos #avCol-5{
+   width:60px;
+}
+.reporteDos #avCol-6{
+  width:10%;
+}
+.reporteDos #avCol-7{
+  width:10%;
+}
+
+.reporteDos .butRowOne > div > button{
+  color:#fefefe;
+  font-size: 18px; 
+}
+
+.reporteDos .butRowOne > div:first-child > button{
+  background-color:#d42929;
+}
+
+.reporteDos .butRowOne > div:last-child > button{
+   background-color:#2e942e;
+}
+
+.reporteDos .butRowOne > div > button:hover{
+   	background-color:greenyellow;
+  	color:#140056;
+	font-size: 20px;
+	font-weight: bold;  
+}
+
+
+
+
+@media screen and (max-width:420px){
+    section{
+        flex-direction: column;
+        align-items: stretch;
+        padding-top: 0vh;
+    }
+    nav{
+        display: flex;
+        padding: 0;
+        width: auto;
+    }
+    .botonIzq, .boton{
+        width: auto;
+        margin: 10px 5px 10px 5px;
+    }
+    .showup #summary{
+        display: flex;
+        padding: 0;
+        width: auto;
+  
+    }
+    .titulo{
+        width: auto;
+    }
+    .titulo2,.titulo3{
+        padding: 5px;
+    }
+    .resumenIng{
+        display: inline;
+        margin-bottom: 30px;
+    }
+    form{
+        margin:auto;
+        width: auto;
+    }
+  }
+  @media screen and (max-width:760px){
+    .resumen{
+        font-size: 0.90rem;
+    }
+    section{
+        padding-top: 0vh;
+    }
+  }

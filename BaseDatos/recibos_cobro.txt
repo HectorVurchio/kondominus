@@ -1,0 +1,58 @@
+CREATE TABLE `recibos_cobro` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `cod_edificio` VARCHAR(20) NOT NULL,
+  `status` TINYINT NOT NULL,
+  `control` INT NOT NULL,
+  `codigo` VARCHAR(14) NOT NULL,
+  `codigo_provision` VARCHAR(14) NOT NULL,
+  `fecha` DATE NOT NULL,
+  `vencimiento` DATE NOT NULL,
+  `desde` DATE NOT NULL,
+  `hasta` DATE NOT NULL,
+  `papfr` FLOAT NOT NULL,
+  `prefr` FLOAT NOT NULL,
+  `pie` TINYTEXT,
+  `reserva` DOUBLE NOT NULL,
+  `provision` DOUBLE NOT NULL,
+  `porpagar` DOUBLE NOT NULL,
+  `monto` DOUBLE NOT NULL,
+  `recib` DOUBLE NOT NULL,
+  `numero_acceso` VARCHAR(20) NOT NULL,
+  `creada` DATETIME NOT NULL,
+  `modificada` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `cod_edificio` (`codigo`)
+) ENGINE=InnoDB DEFAULT CHARSET=UTF8MB4;
+
+RECIBOS DE COBROS MENSUAL
+EXPLICACION DE LOS STATUS:
+status: 0 cuando se crea el recibo
+status 1 cuando se recibio el primer pago hasta el ultimo.
+status 2 cuando ya no se debe nada de ese recibo.
+
+EXPLICACION DEL CODIGO:
+COBROaaaammccc : codigo utilizado en egresos relacionados en recibos de cobro. (ccc = 3 digitos del control del recibo de cobro).
+
+EXPLICACION DEL CODIGO DE PROVISIONES:
+PROVISIOaaaamm : codigo utilizado en PROVISIONES relacionadas en recibos de cobro aun vigentes (aaaa = 4 digitos del ano, mm = 2 digitos del mes).
+
+el codigo de la provision servira para encontrar estas cuando se onsulte este recibo.
+
+desde y hasta son las fechas en las que se buscan los gastos para el recibo de cobro.
+
+pie es la nota en pie de pagina que se le hace a cada recibo.
+
+monto es cantidad total a cobrar en el recibo.
+recib es la cantidad de dinero que se ha recibido hasta la fecha por ese recibo.
+reserva = cantidad de este recibo destinada a la cuenta del fondo de reserva
+provision = cantidad de este recivo que corresponde a las provisiones
+porpagar = cantidad de este recibo destinado a cuentas por pagar
+
+papfr = porcentaje de los gastos a aplicar para el fondo de reserva EN 100.00%
+prefr = porcentaje de lo gastado del fondo de reserva a recuperar EN 100.00%
+
+ALTER TABLE recibos_cobro MODIFY COLUMN papfr FLOAT NOT NULL;
+ALTER TABLE recibos_cobro MODIFY COLUMN prefr FLOAT NOT NULL;
+ALTER TABLE recibos_cobro ADD COLUMN recib DOUBLE NOT NULL AFTER monto;
+
+

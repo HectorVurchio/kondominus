@@ -1,0 +1,15 @@
+CREATE TABLE `propietarios_removidos` (
+  `id_prop` int NOT NULL AUTO_INCREMENT,
+  `cod_propietario` varchar(20) NOT NULL,
+  `cod_edificio` varchar(20) NOT NULL,
+  `cuenta_propietario` varchar(14) NOT NULL,
+  `unidad` varchar(10) NOT NULL,
+  `alicuota` double NOT NULL,
+  `acceso_anterior` VARCHAR(20) NOT NULL,
+  `creada_anterior` timestamp NOT NULL,
+  `numero_acceso` VARCHAR(20) NOT NULL,
+  `creada` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id_prop`),
+  KEY `cuenta_propietario` (`cuenta_propietario`),
+  KEY `cod_propietario` (`cod_propietario`)
+) ENGINE=InnoDB  DEFAULT CHARSET=UTF8MB4;

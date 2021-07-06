@@ -1,0 +1,723 @@
+*{
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+}
+section{
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+  padding-top: 12vh;
+  display: flex;
+}
+nav{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+nav a{
+  text-decoration: none;
+  color: #333333;
+}
+
+#b0{
+  background-color: #140056;
+  color:#ffffff;
+  letter-spacing: 1.5px;
+}
+.b8 {
+  text-align: center;
+}
+  
+/* Botones de los lados */
+.botonIzq, .boton, .b5 {
+  height: 90px;
+  width: 300px;
+  margin-bottom:20px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: #f3f2f0;
+  box-shadow: -10px -10px 15px rgba(255,255,255,0.9), 10px 10px 15px rgba(70,70,70,0.12);
+  border: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boton:hover{
+  background-color: greenyellow;
+}
+.showup{
+  flex-grow: 3;
+  padding-top: 3vh;
+}
+.icon {
+  height: 2.0em;
+  margin: 0 10px 0 -20px;
+}
+
+/* Modulo de Resumen */
+.titulo{
+  box-sizing: border-box;
+  background-color: #140056;
+  border-radius: 10px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 20px;
+  width: 85%;
+}
+.resumen{
+    padding-left: 20px;
+    font-size: 20px;
+    margin-top: 20px;
+    color: #6b6b6b;
+    font-weight: lighter;
+    line-height: 40px;
+}
+/* FORMULARIO DE AGREGAR FACTURAS */
+.formFacturas, .formRecibos, .formNomina, .formComisiones{
+  display: table;
+  box-sizing: border-box;
+  width: 275px;
+  margin: 20px auto;
+}
+
+h2{
+  width: 500px;
+  background-color: #140056;
+  border-radius: 10px;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 20px;
+  margin: auto;
+}
+
+#rifLetra,#rif,#proveedor,#fecha,#factura,#concepto,#excento,#iva,#baseImp,#total,#tipoGasto,#formaPago,#referencia,#ingresar,#recibo,#totalRecibo,#notas,#ci,#empleado,#banco,#comision{
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  margin: 5px;
+}
+#rifLetra {
+  width: 20%;
+}
+#proveedor,#concepto,#empleado {
+  width: 92%;
+}
+
+#excento,#baseImp,#total,#referencia,#totalRecibo,#notas,#banco,#comision {
+  width: 92%;
+  text-align: right;
+}
+#rif,#ci{
+  width: 68%;
+}
+#fecha{
+  float: right;
+  margin-right: 2.4%;
+}
+#factura,#iva,#recibo{
+  width: 64.5%;
+  float: right;
+  margin-right: 2.4%;
+  text-align: right;
+} 
+
+#tipoGasto,#formaPago{
+  width: 96%;
+  float: right;
+  margin-right: 2.4%;
+}
+/* del formulario ctas por pagar*/
+#vencimiento{
+  font-size: 16px;
+  margin: 5px;
+  width: 93%;
+  float: right;
+  margin-right: 2.4%;	
+}
+/* del formulario comisiones bancaria*/
+#banco,#tipoComision{
+  font-size: 16px;
+  margin: 5px;
+  width: 96%;
+  float: right;
+  margin-right: 2.4%;	
+}
+
+.subFormFacturas div:last-child,
+.subFormRecibos div:last-child,
+.formNomina div:last-child,
+.formCom div:last-child{
+	margin-top:20px;
+}
+
+.butForm{
+ height: 40px;
+  width: 92%;
+  margin:auto;
+  font-size: 20px;
+  border-radius: 6px;
+  background-color: #140056;
+  color:white;
+  box-shadow: -10px -10px 15px rgba(255,255,255,0.9), 10px 10px 15px rgba(70,70,70,0.12);
+  border: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.butForm:hover{
+	background-color: greenyellow;
+	color:#252627;
+}
+
+
+@media screen and (max-width:420px){
+  section{
+      flex-direction: column;
+      align-items: stretch;
+      padding-top: 0vh;
+  }
+  nav{
+      display: flex;
+      padding: 0;
+      width: auto;
+  }
+  .botonIzq, .boton{
+      width: auto;
+      margin: 10px 5px 10px 5px;
+  }
+  .showup #summary{
+      display: flex;
+      padding: 0;
+      width: auto;
+
+  }
+  .titulo{
+      width: auto;
+  }
+  .resumen{
+      padding-left: 0px;
+      align-items: stretch;
+      margin: 10px 5px 10px 5px; 
+      font-size: 0.94rem;
+  }
+  .formFacturas,.formRecibos,.formNomina,.formComisiones{
+      box-sizing: border-box;
+      width: 95%;
+      display: flex;
+      flex-wrap: wrap;
+  }
+  h2{
+      width: 94%;
+  }
+  #fecha,#factura, #iva {
+    width: 93%;
+    /* float: right; */
+  }
+}
+@media screen and (max-width:760px){
+  .resumen{
+      font-size: 0.90rem;
+  }
+  section{
+      padding-top: 0vh;
+  }
+}
+
+/* css aproximado para los reportes*/
+
+h3{
+  width: 500px;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 15px;
+  margin: auto;
+}
+
+.tvresult{
+  display:flex;
+  flex-direction: column;
+  padding-top:15px;
+  width: 500px;
+  background-color: #f3f2f0d7d7;
+  border-radius: 10px;
+  font-size: 20px;
+  margin: auto;
+}
+
+.tvresult > div{
+	display:flex;
+	flex-direction:row;
+	align-items: stretch;
+}
+
+.tvresult > div :first-child{
+	flex-grow: 6;
+}
+
+.tvresult > div :nth-child(2){
+	text-align: right;
+	flex-grow: 2;
+}
+
+.tvresult > div :last-child{
+	flex-grow: 1;
+	text-align: center;
+	padding-left:20px;
+	width:20px;
+}
+
+.tvresult >div:last-of-type{
+	margin-top:30px;
+	padding-top:10px;
+	border-top: 1px solid #140056;
+}
+
+.tvresult >div:last-of-type :last-child {
+	flex-grow: 7;
+	text-align: center;
+}
+
+/* dentro del resumen*/
+.muestuno{
+	display:flex;
+	flex-direction:column;
+	font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+
+}
+
+div .muestuno > div:nth-child(1){
+	font-size: 18px;
+	
+}
+
+div .muestuno > .fimu {
+	all: unset;
+	display:flex;
+	flex-direction:row;
+	align-items: stretch;
+	
+}
+
+div .muestuno > .fimu :nth-child(1){
+	all: unset;
+	width:12%;
+}
+div .muestuno > .fimu :nth-child(2){
+	all: unset;
+	width:15%;
+}
+div .muestuno > .fimu :nth-child(3){
+	width:30%;
+}
+div .muestuno > .fimu :nth-child(4){
+	width:35%;
+}
+div .muestuno > .fimu :nth-child(5){
+	all: unset;
+	width:15%;
+}
+
+/* aviso de pago combinado*/
+#subContFac2 > div:nth-child(n+6):nth-child(-n+10){
+	display:flex;
+	margin-top:10px;
+}
+#subContFac2 > div:nth-child(n+6):nth-child(-n+10) :first-child{
+	width:50%;
+}
+#subContFac2 > div:nth-child(n+6):nth-child(-n+10) :last-child{
+	width:50%;
+}
+
+/* primer aviso de reegistro pagos*/
+#contFac1 > div :nth-child(n+3):nth-child(-n+7){
+	display:flex;
+}
+#subContFac1 >div:nth-child(2){
+	margin-bottom:20px;
+}
+
+#contFac1 > div :nth-child(n+3):nth-child(-n+7) :first-child{
+  display: flex;
+  justify-content: flex-start;
+  width:30%;
+
+}
+#contFac1 > div :nth-child(n+3):nth-child(-n+7) :last-child{
+	 display: flex;
+  justify-content: flex-start;
+	width:50%;
+}
+
+#subContFac1 >div:nth-child(8){
+	margin-top:20px;
+	margin-bottom:30px;
+}
+
+/* aviso de cuentas restantes*/
+
+#ctas{
+	display:flex;
+	flex-direction:column;
+}
+#ctas form > div{
+	display:flex;
+	flex-direction:row;
+	margin-bottom:5px;
+}
+#ctas form > div:first-child > div:first-child{
+	text-align:center;
+}
+#ctas form > div:nth-child(n+2):nth-child(-n+6) > div:first-child{
+	text-align:left;
+}
+
+#ctas form > div:nth-child(n+1):nth-child(-n+6) > div:first-child{
+	width:30%;
+	padding-left:10%;
+	justify-content: flex-start;
+			
+}
+
+#ctas form > div:nth-child(n+1):nth-child(-n+6) > div:nth-child(2){
+	width:20%;
+	justify-content: flex-start;
+	padding-right:5%;
+}
+
+#ctas form > div:nth-child(n+1):nth-child(-n+6) > div:nth-child(2)  input{
+	width:90%;
+	justify-content: flex-start;
+}
+
+
+#ctas form > div:nth-child(n+1):nth-child(-n+6) > div:nth-child(3){
+	text-align:right;
+	width:20%;
+}
+
+#ctas form > div:nth-last-child(3){
+	margin-top:20px;
+	margin-bottom:0px;
+}
+
+#ctas form > div:nth-last-child(1){
+	display:flex;
+	flex-direction:row;
+	justify-content: center;
+	margin-top:40px;
+	margin-bottom:30px;
+}
+
+#ctas form > div:nth-last-child(1) div:nth-child(1) button{
+	background-color:#d42929;
+}
+#ctas form > div:nth-last-child(1) div:nth-child(3) button{
+		margin-left:20px;
+	background-color:#2e942e;
+}
+
+/* Formulario de registro de proveedores*/
+
+.formProvider{
+    display:flex;
+    flex-direction:column;
+    width: 275px;
+    margin: 20px auto;
+}
+
+.formProvider :first-child > div {
+	display:flex;
+	flex-direction:row;
+}
+
+#direc,#conta,#email {
+  width: 92%;
+  font-size: 16px;
+  margin: 5px;
+}
+
+#actividad{
+  width: 95%;
+  font-size: 16px;
+  margin: 5px;	
+}
+
+#telI,#telef,#estado,#ciudad{
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  margin: 5px;
+}
+#telI {
+  width: 20%;
+}
+
+#telef{
+  width: 68%;
+}
+#estado,#ciudad{
+	width:46%
+}
+.formProvider > div > div:nth-last-child(3){
+	margin-top:20px;
+}
+
+.formProvider > div > div:nth-last-child(3) > input{
+  height: 40px;
+  width: 92%;
+  margin:auto;
+  font-size: 20px;
+  border-radius: 6px;
+  background-color: #140056;
+  color:white;
+  box-shadow: -10px -10px 15px rgba(255,255,255,0.9), 10px 10px 15px rgba(70,70,70,0.12);
+  border: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formProvider > div > div:nth-last-child(3) > input:hover{
+	background-color: greenyellow;
+	color:#252627;
+}
+
+/* primer aviso de reegistro de proveedores*/
+#contFac4 > div :nth-child(n+2):nth-child(-n+9){
+	display:flex;
+}
+#contFac4 .saRowDos:nth-child(n+2):nth-child(-n+8) :first-child{
+	width:36%;
+	text-align:left;
+}
+
+#contFac4 .saRowDos:nth-child(n+2):nth-child(-n+8) :last-child{
+	width:60%;
+}
+#contFac4 .saRowDos:nth-child(9) :first-child{
+	width:100%;
+	text-align:center;
+}
+
+/* aprobacion registro proveedor */
+
+#suCoRePro1{
+	background-color: #ffffff;
+	font-size: 18px;
+    color:#003656;
+    width:460px;	
+    text-align:center;  
+    padding-top:20px;
+	padding-bottom:10px;
+	border: 1px solid #272c2d;
+	box-shadow: 0 10px 10px 0 #0a0a0a;
+	border-radius:10px;
+	margin:auto; 
+}
+
+#suCoRePro1 > div:last-child{
+	margin-top:30px;
+	margin-bottom:20px;
+}
+
+#suCoRePro1 > div:last-child button{
+  height: 40px;
+  width: 40%;
+  margin:auto;
+  font-size: 20px;
+  border-radius: 6px;
+  background-color: #140056;
+  color:white;
+  box-shadow: -10px -10px 15px rgba(255,255,255,0.9), 10px 10px 15px rgba(70,70,70,0.12);
+  border: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#suCoRePro1 > div:last-child button:hover{
+	background-color: greenyellow;
+	color:#252627;
+}
+
+/* dialogo de registros */
+#subContRegi1{
+	display:flex;
+	flex-direction:column;
+}
+#subContRegi1 > div:nth-child(n+2):nth-last-child(n+3){
+	display:flex;
+}
+#subContRegi1 > div:nth-child(n+2):nth-last-child(n+3) :first-child{
+	width:20%;
+	text-align:left;
+}
+
+#subContRegi1 > div:nth-child(n+2):nth-last-child(n+3) :last-child{
+	width:80%;
+	text-align:left;
+}
+
+/* aceptacion de registro facturas, recibos,etc*/
+/* rechazo de registro facturas, recibos,etc*/
+#suCoReFac1,#suCoNeFac1{
+	background-color: #ffffff;
+	font-size: 18px;
+    color:#003656;
+    width:460px;	
+    text-align:center;  
+    padding-top:20px;
+	padding-bottom:10px;
+	border: 1px solid #272c2d;
+	box-shadow: 0 10px 10px 0 #0a0a0a;
+	border-radius:10px; 
+	margin:auto;
+}
+
+#suCoReFac1 > div:last-child,
+#suCoNeFac1 > div:last-child{
+	margin-top:30px;
+	margin-bottom:20px;
+}
+
+#suCoReFac1 > div:last-child button,
+#suCoNeFac1 > div:last-child button{
+  height: 40px;
+  width: 40%;
+  margin:auto;
+  font-size: 20px;
+  border-radius: 6px;
+  background-color: #140056;
+  color:white;
+  box-shadow: -10px -10px 15px rgba(255,255,255,0.9), 10px 10px 15px rgba(70,70,70,0.12);
+  border: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#suCoReFac1 > div:last-child button:hover,
+#suCoNeFac1 > div:last-child button:hover{
+	background-color: greenyellow;
+	color:#252627;
+}
+
+/*SELECCION DE PROVISIONES*/
+.proCont{
+	display:flex;
+	flex-direction:column;
+	width:400px;
+	margin:auto;
+	padding-top:20px;
+	padding-bottom:10px;
+	border: 1px solid #272c2d;
+	box-shadow: 0 10px 10px 0 #0a0a0a;
+	border-radius:10px;  
+}
+
+.proCont p{
+	text-align:center;
+	margin-bottom:20px;
+	font-size: 20px;
+}
+
+.subProCont{
+	margin:10px 0px 20px 0px;
+}
+.subProCont > div{
+	display:flex;
+}
+.subProCont > div:nth-child(2n+1):nth-last-child(n+3) div:nth-child(1) {
+	padding-left:5%;
+	width:55%;
+}
+
+.subProCont > div:nth-child(2n+1):nth-last-child(n+3) div:nth-child(2)  {
+	width:25%;
+	padding-right:5%;
+	text-align:right;
+}
+
+.subProCont > div:nth-last-child(2){
+	margin-top:40px;
+}
+.subProCont > div:nth-last-child(2) > div{
+	display:flex;
+	justify-content: center;
+	width:50%;
+}
+
+.subProCont > div:nth-last-child(2) > div input{
+	width:60%;
+	height:40px;
+    font-size: 20px;
+    border-radius: 6px;
+    color:white;
+    box-shadow: -10px -10px 15px rgba(255,255,255,0.9), 10px 10px 15px rgba(70,70,70,0.12);
+    border: 0px;
+}
+
+.subProCont > div:nth-last-child(2) div:first-child input{
+	background-color:#d42929;
+}
+
+.subProCont > div:nth-last-child(2) div:last-child input{
+	background-color:#2e942e;
+}
+
+.subProCont > div:nth-last-child(2) > div input:hover{
+    background-color: greenyellow;
+	color:#252627;	
+}
+
+/* dentro de provisiones a ejecutar*/
+.showuno{
+	display:flex;
+	flex-direction:column;
+	font-family: 'Oswald', sans-serif;
+    font-size: 14px;
+    margin:auto;
+    padding:10px;
+    background-color:#e3e2e8;
+	width:80%;
+}
+
+div .showuno > div:nth-child(1){
+	font-size: 18px;
+}
+
+div .showuno > .fishu {
+	display:flex;
+	flex-direction:row;
+	align-items: stretch;
+	
+}
+
+div .showuno > .fishu div:nth-child(1){
+	width:5%;
+	margin-left:5%;
+}
+div .showuno > .fishu :nth-child(2){
+	all: unset;
+	width:20%;
+}
+div .showuno > .fishu :nth-child(3){
+	width:25%;
+}
+div .showuno > .fishu :nth-child(4){
+	width:30%;
+}
+div .showuno > .fishu :nth-child(5){
+	width:10%;
+}

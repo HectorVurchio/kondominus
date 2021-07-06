@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+  }
+  section{
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+    padding-top: 12vh;
+    display: flex;
+  }
+  nav{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  nav a{
+    text-decoration: none;
+    color: #333333;
+  }
+  
+  #b0{
+    background-color: #140056;
+    color:#ffffff;
+    letter-spacing: 1.5px;
+  }
+  .b8 {
+    text-align: center;
+  }
+    
+/* Botones de los lados */
+.botonIzq, .boton{
+    height: 90px;
+    width: 300px;
+    margin-bottom:20px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: #f3f2f0;
+    box-shadow: -10px -10px 15px rgba(255,255,255,0.9), 10px 10px 15px rgba(70,70,70,0.12);
+    border: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  
+.boton:hover{
+    background-color: greenyellow;
+  }
+  .showup{
+    flex-grow: 3;
+    padding-top: 3vh;
+    box-sizing: border-box;
+  }
+
+.icon {
+    height: 2.0em;
+    margin: 0 10px 0 -20px;
+}
+      
+/* Modulo de Resumen */
+.titulo{
+    box-sizing: border-box;
+    background-color: #140056;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 5px;
+    margin-bottom: 20px;
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* tablas */
+.tabone,.tabtwo,.tabthree{
+  display:flex;
+  justify-content: center;
+  width:85%;
+  box-sizing: border-box;
+  background-color:#f3f2f0;
+   box-shadow: -10px -10px 15px rgba(255,255,255,0.9), 10px 10px 15px rgba(70,70,70,0.12);
+   border-radius: 10px;
+}
+
+.tabone table tr :nth-child(1){
+  width:80px;
+  text-align:center;
+}
+
+.tabone table tr :nth-child(2){
+  width:120px;
+  text-align:center;
+}
+.tabone table tr :nth-child(3){
+  text-align:right;
+  width:120px;
+}
+
+.tabone table tr:last-child,
+.tabtwo table tr:last-child,
+.tabthree table tr:last-child{
+   font-size: 20px;
+   font-weight: bold;
+}
+
+.tabtwo table tbody tr :first-child,
+.tabtwo table tbody tr :nth-child(2),
+.tabthree table tbody tr :first-child,
+.tabthree table tbody tr :nth-child(2){
+  width:60px;
+  text-align:center;
+}
+
+.tabtwo table tbody tr :nth-child(3),
+.tabtwo table tbody tr :nth-child(4),
+.tabthree table tbody tr :nth-child(3),
+.tabthree table tbody tr :nth-child(4){
+   width:100px;
+   text-align:center;
+
+}
+
+.tabtwo table tbody tr :nth-child(5),
+.tabthree table tbody tr :nth-child(5){
+     width:80px;
+     text-align:right;
+}
+
+.tabthree table tbody tr :nth-child(6){
+     width:60px;
+     text-align:center;
+}
+

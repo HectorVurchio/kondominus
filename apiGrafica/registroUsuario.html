@@ -1,0 +1,57 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Código de Acceso</title>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="#" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="apiGrafica/estilos/cuerpoIngreso.css">
+  <link rel="stylesheet" href="apiGrafica/estilos/formularioIng.css">
+  <link rel="stylesheet" href="apiGrafica/estilos/containerIngr.css">
+  <link rel="stylesheet" href="apiGrafica/estilos/avisoCuatro.css">
+  <script src="/apiGrafica/js/nuevos/registroUsuario.js?2" type="module"></script>
+</head>
+<body>
+  
+  <header>
+     <div class="cabeceraUno"><a href="/ ">Página Principal</a></div>
+     <div class="cabeceraDos"><a href="/ingreso">Ingresar</a></div>
+  </header> 
+  <section>
+	<div class="imageContainer">
+		<div class='zonaRegistro'>
+			<p class="ir">Registrarme</p>   
+			<form class='regFormular' id='register'>
+				<div class='regUsRow'>
+					<input type='text' id='nombre' class='campoFormular' placeholder='Nombre' maxLength='30'>
+				</div>
+				<div class='regUsRow'>
+					<input type='text' id='apellido' class='campoFormular' placeholder='Apellido' maxLength='30'>
+				</div>
+				<div class='regUsRow'>
+					<select id='rifLetra' class='campoFormular' style='width:60px;'>
+						<option value='V-'>V-</option>
+						<option value='J-'>J-</option>
+						<option value='E-'>E-</option>
+						<option value='G-'>G-</option>
+					</select>
+					<input type='text' id='rif' class='campoCedula' placeholder='Cédula o RIF' maxLength='9'>
+				</div>
+				<div class='regUsRow'>
+					<input type='email' id='email' class='campoFormular' placeholder='Correo Electrónico' maxLength='60'>
+				</div>
+				<div  class='regUsRow'>
+					<button  class='botonIng' id='botEnv'>Enviar</button>
+				</div>
+			</form>
+		</div>
+  </section>
+<div class="resolucion">
+<p>Resolución Mínima 300px</p>
+</div>
+
+</body>
+</html>

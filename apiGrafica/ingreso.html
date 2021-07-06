@@ -1,0 +1,44 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ingreso</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="/apiGrafica/js/nuevos/ingreso.js?2" type="module"></script>
+  <link rel="shortcut icon" href="#" />
+  <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="apiGrafica/estilos/cuerpoIngreso.css">
+  <link rel="stylesheet" href="apiGrafica/estilos/formularioIng.css">
+  <link rel="stylesheet" href="apiGrafica/estilos/containerIngr.css">
+  <link rel="stylesheet" href="apiGrafica/estilos/alerta.css">
+</head>
+<body>
+  <header>
+     <div class="cabeceraUno"><a class="principal" id='principal' href="javascript:void(0);">Página Principal</a></div>
+  </header>  
+  <div class="imageContainer">
+     <div class="contenedorUno">
+     </div>
+    <div class="zonaIngreso">
+       <p class="is">Iniciar Sesión</p>          
+        <form class="ingFormular" id='ingFormular'>
+            <input type="email" id="email" class="campoFormular" autocomplete="username" placeholder="Correo Electrónico"/>
+            <input type="password" id="password" class="campoFormular" autocomplete="current-password" placeholder="Contraseña"/>
+			<input type="hidden" id="band"  value="ingreso"/>
+            <button class="botonIng" id='botonIng'>Ingresar</button>
+			<div class="olvidoCont">
+                <a href="javascript:void(0);" class="olvidoContra" id='olvidoContra'>¿Olvidé mi contraseña?</a>
+            </div>
+            <div class="noReg"><spam class="nuevoAqui">¿Nuevo aquí?</spam><a class="registrarse" id='registrarse' href="javascript:void(0);">Registrarme</a></div> 
+        </form>
+    </div>
+  </div>
+<div class="resolucion">
+<p>Resolución Mínima 300px</p>
+</div>
+</body>
+</html>
